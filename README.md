@@ -1,2 +1,3 @@
 # notes
-Summarised notes for courses taken, markdown format
+Summarised notes for courses, markdown format
+
