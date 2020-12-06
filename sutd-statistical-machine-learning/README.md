@@ -28,10 +28,10 @@ Shaowei's background
 
 
 Resources
-- https://people.sutd.edu.sg/~shaowei_lin/2020-sml/
-- https://people.sutd.edu.sg/~nengli_lim/teaching/
-- Homework https://www.dropbox.com/sh/vm47e18xw51dg8j/AAA0flBxkI70R8-_XjTkmBqTa?dl=0
-- Lecture videos - https://www.youtube.com/playlist?list=PLT9axpKGZUPT3tRicTypkjxMj3sbCxTzL
+- [First half](https://people.sutd.edu.sg/~shaowei_lin/2020-sml/)
+- [Second half](https://people.sutd.edu.sg/~nengli_lim/teaching/)
+- [Homework](https://www.dropbox.com/sh/vm47e18xw51dg8j/AAA0flBxkI70R8-_XjTkmBqTa?dl=0) and sample midterms
+- [Lecture videos](https://www.youtube.com/playlist?list=PLT9axpKGZUPT3tRicTypkjxMj3sbCxTzL)
 
 
 
@@ -76,12 +76,12 @@ conda install nb_conda jupyter ipykernel -y
 
 #### Machine Learning 
 
-- [x] Define machine learning in terms of algorithms, tasks, performance and experience.
+- Define machine learning in terms of algorithms, tasks, performance and experience.
   - algorithms that improve their performance at some task with experience
-- [x] State that the goal of machine learning is generalization.
+- State that the goal of machine learning is generalization.
   - generalises well even on unseen data.
-- [x] List three main types of machine learning, e.g. supervised, unsupervised, and reinforcement learning.
-- [x] Describe some potential dangers in machine learning, e.g. making unethical predictions due to bias in training data, undesirable feedback between machine and human learning, applying an algorithm without understanding its assumptions.
+- List three main types of machine learning, e.g. supervised, unsupervised, and reinforcement learning.
+- Describe some potential dangers in machine learning, e.g. making unethical predictions due to bias in training data, undesirable feedback between machine and human learning, applying an algorithm without understanding its assumptions.
 
 <div style="page-break-after: always;"></div>
 
@@ -90,30 +90,30 @@ conda install nb_conda jupyter ipykernel -y
 
 #### Pipeline
 
-- [x] List the steps in the machine learning pipeline: collect data, extract features, design models, train models, select models, evaluate solution.
-- [x] Define the roles of training, validation and test data in the pipeline, and describe their structure as sets of pairs of inputs/features and targets. 
-- [x] Define the following: model, estimator, model parameter, training objective, optimal parameter, optimal estimator. 
+- List the steps in the machine learning pipeline: collect data, extract features, design models, train models, select models, evaluate solution.
+- Define the roles of training, validation and test data in the pipeline, and describe their structure as sets of pairs of inputs/features and targets. 
+- Define the following: model, estimator, model parameter, training objective, optimal parameter, optimal estimator. 
   - Each model $\mathcal{H}$ (a set of linear functions) is a set of estimators $f$ (a linear function) consisting of paramters $\theta$ (coefficients).
-- [x] Explain the difference between training and prediction.
-- [x] Explain the difference between underfitting and overfitting. 
-- [x] Give an example in regression of a task, the performance evaluation (via test data), the given experience (via training data), and the training algorithm.
+- Explain the difference between training and prediction.
+- Explain the difference between underfitting and overfitting. 
+- Give an example in regression of a task, the performance evaluation (via test data), the given experience (via training data), and the training algorithm.
 
 
 
 #### Decision Theory 
 
-- [x] Define and give examples of **action, loss, risk, empirical risk and decision**.
+- Define and give examples of **action, loss, risk, empirical risk and decision**.
   - Actions $\theta$ - Objects considered in decision making
-  - Loss $\mathcal{L(\theta|(x,y))}$ - Amount lost by action $\theta$ based on truth $(x,y)$.
+  - Loss $\mathcal{L(\theta \vert (x,y))}$ - Amount lost by action $\theta$ based on truth $(x,y)$.
     - "Minimising the empirical risk under squared loss is the same as maximising the likelihood under Gaussian error"
     - $\mathcal{L}(\theta) = \frac{1}{2} (y-\theta^T x)^2 = \text{Loss}( y - \theta^T x)$ where $\text{Loss}(z) = \frac{1}{2} z^2$
-  - Risk $\mathcal{R}(\theta|p)$ - Expected loss given true distribution $p(x,y)$ which is unknown.
+  - Risk $\mathcal{R}(\theta \vert p)$ - Expected loss given true distribution $p(x,y)$ which is unknown.
     - $\int \mathcal{L}(0;(x,y)) \enspace p(x,y) \enspace dx \enspace dy$
-  - Emprirical Risk $\mathcal{R}(\theta| \mathcal{S})$ - Estimated risk given data $\mathcal{S}$ (which can be training data $\mathcal{S}_n,$ validation data $\mathcal{S}_{val}$ or test data $\mathcal{S}_*$)
+  - Emprirical Risk $\mathcal{R}(\theta \vert  \mathcal{S})$ - Estimated risk given data $\mathcal{S}$ (which can be training data $\mathcal{S}_n,$ validation data $\mathcal{S}_{val}$ or test data $\mathcal{S}_*$)
   - Decision $\hat{\theta}(S_n)$ Action chosen based on data $\mathcal{S}_n$
-- [x] Give examples of different kinds of loss functions.
+- Give examples of different kinds of loss functions.
   - squared loss (L2), absolute loss (L1), zero-one loss (L0), negative log-likelihood
-- [x] Define the inability to generalize as risk, and explain why we need to estimate this risk with empirical risk, e.g. training, validation, test errors.
+- Define the inability to generalize as risk, and explain why we need to estimate this risk with empirical risk, e.g. training, validation, test errors.
   - Inability of $\mathcal{H}$ to generalise = bias + variance + noise
   - ![Screenshot 2020-02-06 at 1.49.23 PM](assets/Screenshot 2020-02-06 at 1.49.23 PM.png)
 
@@ -121,14 +121,14 @@ conda install nb_conda jupyter ipykernel -y
 
 #### Optimization 
 
-- [x] Describe how to derive exact solutions or use gradient descent for optimization problems. Describe how local minima problems can be mitigated.
+- Describe how to derive exact solutions or use gradient descent for optimization problems. Describe how local minima problems can be mitigated.
   
   - Local minima problem - solve for all local minima for exact solution, multiple starting points for gradient descent
-- [x] Explain why we may prefer descent over exact methods in machine learning.
+- Explain why we may prefer descent over exact methods in machine learning.
   
   - Faster and feasible computation, transferable algorithms
-- [x] Outline some computational strategies for machine learning: distributed computation, stochastic gradient descent, automatic differentiation. 
-- [x] Compute gradients automatically using PyTorch. 
+- Outline some computational strategies for machine learning: distributed computation, stochastic gradient descent, automatic differentiation. 
+- Compute gradients automatically using PyTorch. 
   - ```python
     optimizer.zero_grad()
     outModel = model(data)
@@ -141,43 +141,43 @@ conda install nb_conda jupyter ipykernel -y
 
 #### Regression
 
-- [x] Define regression statistically as estimating the conditional expectation of an unknown target given the observed inputs.
-  - To obtain estimator $r(x) = \mathbb{E}[y|x]$.
-- [x] Outline the statistical methodology in regression: learn the conditional distribution using maximum likelihood; derive the conditional expectation.
-  - Learn conditional distribution $p(y|x)$ with maximum likelihood.
-  - Derive the conditional expectation $r(x)$ from $p(y|x)$.
-- [x] Given a conditional distribution and data set, write down the (conditional) likelihood, the negative log-likelihood and derive its gradient.
+- Define regression statistically as estimating the conditional expectation of an unknown target given the observed inputs.
+  - To obtain estimator $r(x) = \mathbb{E}[y \vert x]$.
+- Outline the statistical methodology in regression: learn the conditional distribution using maximum likelihood; derive the conditional expectation.
+  - Learn conditional distribution $p(y \vert x)$ with maximum likelihood.
+  - Derive the conditional expectation $r(x)$ from $p(y \vert x)$.
+- Given a conditional distribution and data set, write down the (conditional) likelihood, the negative log-likelihood and derive its gradient.
   - ![Screenshot 2020-03-03 at 12.18.34 AM](assets/Screenshot 2020-03-03 at 12.18.34 AM.png)
   - How to **derive the gradient**?
-- [x] Describe a generalized linear model as a set of conditional distributions (from some exponential family) with a link function. View linear regression as a GLM.
-  - **conditional distribution** $p(y|x, \theta) = \mathbb{E}[y|x,\theta]$ from some exponential family
-  - **link function** $g(\mathbb{E}[y|x,\theta]) = \theta^T x$ (does this need to be **invertible**?)
-- [x] List strategies to overcome overfitting in models with many parameters.
+- Describe a generalized linear model as a set of conditional distributions (from some exponential family) with a link function. View linear regression as a GLM.
+  - **conditional distribution** $p(y \vert x, \theta) = \mathbb{E}[y \vert x,\theta]$ from some exponential family
+  - **link function** $g(\mathbb{E}[y \vert x,\theta]) = \theta^T x$ (does this need to be **invertible**?)
+- List strategies to overcome overfitting in models with many parameters.
   - More data, less parameters, early stopping, model selection
 
 
 
 #### Model Selection 
 
-- [x] Explain in words the bias-variance tradeoff, and how it affects model selection.
+- Explain in words the bias-variance tradeoff, and how it affects model selection.
   - Inability of $\mathcal{H}$ to generalise = bias + variance + noise
 
 
 
 #### Regularization 
 
-- [x] Explain that regularization helps generalization by creating for model selection, a family of models where model complexity is penalized to different extents during training. Describe how the hyperparameters are selected.
+- Explain that regularization helps generalization by creating for model selection, a family of models where model complexity is penalized to different extents during training. Describe how the hyperparameters are selected.
   - Different regulraisation parameter $\lambda$ for to penalise the complexity of the model to different extents.
   - Hyperparameters are selected with validation error.
-- [x] Describe the difference between the training objective and the training error.
+- Describe the difference between the training objective and the training error.
   - training objective = training error + regularisation
-- [x] Give examples of regularizers that are commonly used in machine learning.
-  - Ridge regression $\dfrac{\lambda}{2} ||\theta||^2$
-  - Lasso regression $\lambda |\theta|$
+- Give examples of regularizers that are commonly used in machine learning.
+  - Ridge regression $\dfrac{\lambda}{2}  \vert  \vert \theta \vert  \vert ^2$
+  - Lasso regression $\lambda  \vert \theta \vert $
   - Lasso has higher test error, picks a simpler model, and runs faster for subset selection.
-- [x] Explain how the exact solution for ridge regression stabilizes the estimator.
+- Explain how the exact solution for ridge regression stabilizes the estimator.
   - No longer a problem when there are **more parameters** than data
-- [x] Explain how gradient descent for ridge regression works through shrinkage.
+- Explain how gradient descent for ridge regression works through shrinkage.
   - The parameter shrinks at every step, unless propped by the gradient.
   - ![Screenshot 2020-03-01 at 9.29.15 PM](assets/Screenshot 2020-03-01 at 9.29.15 PM.png)
 
@@ -185,9 +185,9 @@ conda install nb_conda jupyter ipykernel -y
 
 #### Classification
 
-- [x] Describe the difference between classification and regression.
+- Describe the difference between classification and regression.
   - The target is a label instead of a real value.
-- [x] Given a perceptron, draw its decision boundary and decision regions.
+- Given a perceptron, draw its decision boundary and decision regions.
   - $h(x;\theta) = H(\theta^T x)$, $H(z)$ is one if positive, zero otherwise.
   - $\theta$ is orthogonal to the decision boundar which splits the space into  decision regions
   - Gradient is zero almost anywhere.
@@ -196,42 +196,42 @@ conda install nb_conda jupyter ipykernel -y
 
 #### Logistic Regression
 
-- [x] Write down the model in logistic regression, and describe how a classifier can be derived from a conditional distribution in the model after learning.
-  - $f(x|\theta) = \text{sigmoid}(\theta^T x)$
-- [x] Write down logistic regression as a generalized linear model. **Derive** the training objective and the training gradient.
-  - Conditional distribution $p(y|x)$ 
-    - $p(y|x) = \text{sigmoid}((2y-1)(\theta^T x))$
+- Write down the model in logistic regression, and describe how a classifier can be derived from a conditional distribution in the model after learning.
+  - $f(x \vert \theta) = \text{sigmoid}(\theta^T x)$
+- Write down logistic regression as a generalized linear model. **Derive** the training objective and the training gradient.
+  - Conditional distribution $p(y \vert x)$ 
+    - $p(y \vert x) = \text{sigmoid}((2y-1)(\theta^T x))$
     - From the Bernoulli family
-  - Link function $g(\mathbb{E}[y|x]) = \theta^T x$ 
+  - Link function $g(\mathbb{E}[y \vert x]) = \theta^T x$ 
     - $g(z) = f^{-1}(z) =  \text{sigmoid}^{-1}(z) = \log \dfrac{z}{1-z}$ 
-  - Training objective is to minimise negative log likelihood $\mathcal{L}(\theta|\mathcal{S}_n)$
-    - $\mathcal{L}(\theta|\mathcal{S}_n) = \dfrac{1}{n}\sum_{(x,y) \in \mathcal{S}_n} \text{Loss}\left((2y-1)(\theta^T x)\right)$
+  - Training objective is to minimise negative log likelihood $\mathcal{L}(\theta \vert \mathcal{S}_n)$
+    - $\mathcal{L}(\theta \vert \mathcal{S}_n) = \dfrac{1}{n}\sum_{(x,y) \in \mathcal{S}_n} \text{Loss}\left((2y-1)(\theta^T x)\right)$
     - $\text{Loss}(z) = \log(1 + e^{-z})$
   - Training gradient is the average of point gradients
-    - Point gradient $\dfrac{\delta}{\delta \theta} \text{Loss}\left((2y-1)(\theta^T x)\right) = x(f(x|\theta) - y)$
+    - Point gradient $\dfrac{\delta}{\delta \theta} \text{Loss}\left((2y-1)(\theta^T x)\right) = x(f(x \vert \theta) - y)$
 
 
 
 #### Softmax Regression
 
-- [x] Define one-hot encodings for labels in multiclass classification.
+- Define one-hot encodings for labels in multiclass classification.
   - Logistic regression is the case when the number of labels is two.
-- [x] Write down the model in softmax regression. Define the softmax function. Explain why the last column of the matrix of parameters may be set to zero.
-  - Model vector of $k$ probabilities $p(y|x,\theta) = \text{softmax}(\theta^T x)$
+- Write down the model in softmax regression. Define the softmax function. Explain why the last column of the matrix of parameters may be set to zero.
+  - Model vector of $k$ probabilities $p(y \vert x,\theta) = \text{softmax}(\theta^T x)$
   - $\text{softmax}(z)_j = \dfrac{\exp z_j}{\sum_{l=1}^k \exp z_l}$
   - Dimensions of parameter $\theta \in \mathbb{R}^{d \times k}$
   - As adding a constant to any entire row does not change the model, the last column may be subtracted from every column without changing the model, the last column may be set to zero.
-- [x] Write down softmax regression as a generalized linear model
-  - Conditional distribution $p(y|x)$ 
-    - $p(y|x) = \text{softmax}(\theta^T x)$
+- Write down softmax regression as a generalized linear model
+  - Conditional distribution $p(y \vert x)$ 
+    - $p(y \vert x) = \text{softmax}(\theta^T x)$
     - From the Bernoulli family
-  - Link function $g(\mathbb{E}[y|x]) = \theta^T x$ 
+  - Link function $g(\mathbb{E}[y \vert x]) = \theta^T x$ 
     - $g(z) = f^{-1}(z) =  \text{softmax}^{-1}(z) = \log \dfrac{y}{y_k}$ 
     - **What is $y_k$?** It is any constant such that the sum of probabilities become one?
   - Training objective is to minimise **negative log likelihood**
-    - Point loss $\mathcal{L}(\theta|(x,y)) = \log(\sum \exp \theta^T x) - (\theta y)^T x$
+    - Point loss $\mathcal{L}(\theta \vert (x,y)) = \log(\sum \exp \theta^T x) - (\theta y)^T x$
   - Training gradient is the average of point gradients
-    - Point gradient $\dfrac{\delta}{\delta \theta} \mathcal{L}(\theta|(x,y)) = x(f(x|\theta) - y)$
+    - Point gradient $\dfrac{\delta}{\delta \theta} \mathcal{L}(\theta \vert (x,y)) = x(f(x \vert \theta) - y)$
 
 
 
@@ -241,56 +241,56 @@ conda install nb_conda jupyter ipykernel -y
 
 #### Feedforward Networks  
 
-- [x] Define an artificial neuron. Give examples of activation functions.
+- Define an artificial neuron. Give examples of activation functions.
   - $h_{w,b}(x) = f(\sum_{i=1}^d w_i x_i + b)$
   - sigmoid $\frac{1}{1+e^{-z}}$, tanh $\frac{e^z - e^{-z}}{e^z + e^{-z}}$, softplus  $\ln(1-e^{-z})$, ReLU $\max(0,z)$
-- [x] Write down **forward propagation in matrix notation**.
+- Write down **forward propagation in matrix notation**.
   - ![Screenshot 2020-03-01 at 11.34.40 PM](assets/Screenshot 2020-03-01 at 11.34.40 PM.png)
-- [x] Distinguish between network parameters and network architecture.
+- Distinguish between network parameters and network architecture.
   - **Weights and biases** versus arrangement and number of neurons and activation functions used
-- [x] Give examples of network architectures in supervised learning (e.g. convolutional networks) and in unsupervised learning (e.g. autoencoders).
+- Give examples of network architectures in supervised learning (e.g. convolutional networks) and in unsupervised learning (e.g. autoencoders).
   - Undersupervised learning and "reduced representation"
 
 
 
 #### Backpropagation
 
-- [x] Define the training loss and the **backpropagated error**. **Derive the gradients in terms of the backpropagated error using chain rule.**
+- Define the training loss and the **backpropagated error**. **Derive the gradients in terms of the backpropagated error using chain rule.**
   - ![Screenshot 2020-03-01 at 11.44.12 PM](assets/Screenshot 2020-03-01 at 11.44.12 PM.png)
   - ![Screenshot 2020-03-01 at 11.55.11 PM](assets/Screenshot 2020-03-01 at 11.55.11 PM.png)
-- [x] **Outline the steps of the backpropagation algorithm.** Explain how dynamic programming speeds up the computation of the gradient during training.
+- **Outline the steps of the backpropagation algorithm.** Explain how dynamic programming speeds up the computation of the gradient during training.
   - ![Screenshot 2020-03-01 at 11.50.25 PM](assets/Screenshot 2020-03-01 at 11.50.25 PM.png)
-- [x] Explain why deep learning is more successful today than it was in the 1980s.
+- Explain why deep learning is more successful today than it was in the 1980s.
   - Too little data, computers too slow, weights initialised wrongly, wrong type of non-linearity (should use ReLU instead of sigmoid which saturates)
 
 
 
 #### Feature Engineering 
 
-- [x] Explain the success of deep learning in terms of removing the need for handcrafted features by domain experts.
+- Explain the success of deep learning in terms of removing the need for handcrafted features by domain experts.
   - The features learnt in each layer are learnt by backprop, not designed by hand. The weights learnt in the neural network are called feature maps.
-- [x] Give examples of applications of deep learning. 
-- [x] View a deep network with ReLU activations as a piecewise-linear function.
+- Give examples of applications of deep learning. 
+- View a deep network with ReLU activations as a piecewise-linear function.
   - Piecewise linear functions can approximate function.
   - Deep network is a model of piecewise linear functions. **How are the regions derived?**
   - $2^n$ regions with $n$ neurons to fit any shape in the data.
-- [x] Explain the strengths and the limitations of deep learning using the universal approximation theorem and the no-free-lunch theorem.
+- Explain the strengths and the limitations of deep learning using the universal approximation theorem and the no-free-lunch theorem.
   - Universal approximation theorem - there exist two-layer neural network (with arbtirarily large middle layer) perform perfectly on training data - but will overfit
   - No-free-lunch theroem - if an algorithm performs well on a certain class of problems, it has degraded performance on the remaining problems - not all problems are useful however
-- [x] Describe how deep learning enables regression/classification with less data by learning lower dimensional structure in high dimensional data
+- Describe how deep learning enables regression/classification with less data by learning lower dimensional structure in high dimensional data
   - Data is often near low-dimensional manifold in a high dimensional space - Sparsity aids the learning low-dimensional manifold - Fewer labeled points needed for classification
-- [x] Describe how deep learning advances machine learning (software without explicit programming) by allowing modular blocks to be chained and trained.
+- Describe how deep learning advances machine learning (software without explicit programming) by allowing modular blocks to be chained and trained.
   - Differentiable programming - "search to a continuous subset of the program space" - "assembling networks of parameterized functional blocks" - you can chain together different blocks and train them together - and this is how deep learning is different from traditional machine learning
 
 
 
 #### Convolutional Networks 
 
-- [x] Explain how convolution of shared filters and pooling of feature maps solves the dimensionality problem in computer vision.
+- Explain how convolution of shared filters and pooling of feature maps solves the dimensionality problem in computer vision.
   - A fully connect layer requires too many parameters - The location feature in an image does not matter, "translation invariance, feature invariance"
-- [x] Compute the tensor convolution of a multichannel feature map by multichannel filters. Define the kernel size, stride and padding in a convolution. 
+- Compute the tensor convolution of a multichannel feature map by multichannel filters. Define the kernel size, stride and padding in a convolution. 
   - Please know how to compute by hand
-- [x] Identify the purpose of different blocks in a given piece of PyTorch code.
+- Identify the purpose of different blocks in a given piece of PyTorch code.
 
 
 
@@ -298,15 +298,15 @@ conda install nb_conda jupyter ipykernel -y
 
 #### Recurrent Neural Networks 
 
-- [x] Distinguish between feedforward and recurrent networks.
-- [x] Describe how recurrent networks learn long-term dependencies in sequential data by storing temporal states and accessing them with attention.
+- Distinguish between feedforward and recurrent networks.
+- Describe how recurrent networks learn long-term dependencies in sequential data by storing temporal states and accessing them with attention.
   - $\text{Attention}(Q,K,V) = f(K^T Q) \star V$
     - Matrix of keys $K$, vector of values $V$, vector of query $Q$
     - How much to select $K^T Q$, What to select $V$
     - $f$ could be a sigmoid or softmax
     - $\star$ is the notation for element-wise product
     - Returns a vector
-- [x] Describe attention mechanisms in terms of queries on key-value pairs. 
+- Describe attention mechanisms in terms of queries on key-value pairs. 
   - Input for every cell
     - cell state $C_{t-1}$
     - concatenate of output state $h_{t-1}$ and input vector $x_t$ 
@@ -346,14 +346,14 @@ conda install nb_conda jupyter ipykernel -y
 
 #### Maximum Margins 
 
-- [x] Explain how the problem of finding a classifier with maximal margin widths can be written as a constrained squared-loss optimization problem.
-- [x] Explain why soft margins are needed for linearly inseparable data, and how it can be written as a constrained optimization problem with slack variables.
-  - minimise $\dfrac{\textcolor{red}{\lambda}}{2} ||\theta||^2 + \textcolor{red}{\dfrac{1}{n}\Sigma_{(x,y)} \xi_{x,y}}$
+- Explain how the problem of finding a classifier with maximal margin widths can be written as a constrained squared-loss optimization problem.
+- Explain why soft margins are needed for linearly inseparable data, and how it can be written as a constrained optimization problem with slack variables.
+  - minimise $\dfrac{\textcolor{red}{\lambda}}{2}  \vert  \vert \theta \vert  \vert ^2 + \textcolor{red}{\dfrac{1}{n}\Sigma_{(x,y)} \xi_{x,y}}$
   - subject to $y(\theta^T x + \theta_0) \geq 1 - \textcolor{red}{\xi_{x,y}}$ and $\textcolor{red}{\xi_{x,y} \geq 0}$
-- [x] Explain how the hinge loss classifier with regularization **is the same as** the soft margin classifier with slack variables. 
-  - minimise $\dfrac{\lambda}{2}||\theta||^2 + \dfrac{1}{n} \Sigma_{(x,y)} \text{Loss}(y(\theta^T x + \theta_0))$
+- Explain how the hinge loss classifier with regularization **is the same as** the soft margin classifier with slack variables. 
+  - minimise $\dfrac{\lambda}{2} \vert  \vert \theta \vert  \vert ^2 + \dfrac{1}{n} \Sigma_{(x,y)} \text{Loss}(y(\theta^T x + \theta_0))$
   - $\text{Loss}(z) = \max(1-z,0)$
-- [x] Analyze the effects (in terms of margin width and in terms of generalization) of changing the hyperparameters $\lambda$ or $C=1/\lambda$ on the trained classifier.
+- Analyze the effects (in terms of margin width and in terms of generalization) of changing the hyperparameters $\lambda$ or $C=1/\lambda$ on the trained classifier.
 
 
 
@@ -361,12 +361,12 @@ conda install nb_conda jupyter ipykernel -y
 
 Comment: As the two strategies are explained side-by-side, it was quite hard to follow. Moreover you are mixing primal-dual (from optimsation) and Lagrangian (from systems world).
 
-- [x] Outline two strategies (dual problem with box constraints, exact solution to KKT conditions) for solving optimization problems with inequality constraints.
+- Outline two strategies (dual problem with box constraints, exact solution to KKT conditions) for solving optimization problems with inequality constraints.
   - Solve a dual optimisation problem where the constraints are nicer and where it is easier to implement gradient descent.
     - Box constraints (variable $\in [a,b]$) are easier to work with, and the objective function is still manageable (quadratic for example).
   - Solve the Lagrangian system of equations.
     - Write down the Lagrangian, solve for critical points, pick the critical point which gives the global minimum. Issue - manipulating math may be hard (?).
-- [x] Write down the primal and dual problems in terms of the Lagrangian. Compare the primal and dual optimal values using the max-min inequality.
+- Write down the primal and dual problems in terms of the Lagrangian. Compare the primal and dual optimal values using the max-min inequality.
   - Lagrangian $\mathcal{L}(x,\lambda) = f(x) + \lambda_1 h_1 (x) + ...$ 
   - Objective of primal player - minimise $\mathcal{L}(x,\lambda)$ 
     Approach - set all $h_i(x)$ to zero and you get $p^*$
@@ -374,7 +374,7 @@ Comment: As the two strategies are explained side-by-side, it was quite hard to 
     Approach - for each $\lambda$ compute $\underset{x}{\min}\mathcal{L}(x,\lambda)$. Return the maxmin. 
   - $p^* = \underset{x}{\min} \underset{\lambda}{\max} \mathcal{L} (x, \lambda) \geq \underset{\lambda}{\max} \underset{x}{\min} \mathcal{L} (x, \lambda) = d^*$
   - Intuition - you do better if you have the final say.
-- [x] Given a constrained optimization problem, **derive the dual problem and its constraints**, and **write down the complementary slackness conditions**.
+- Given a constrained optimization problem, **derive the dual problem and its constraints**, and **write down the complementary slackness conditions**.
   - This uses both the primal and dual formulations.
   
     ![Screenshot 2020-03-02 at 10.44.52 PM](assets/Screenshot 2020-03-02 at 10.44.52 PM.png)
@@ -387,21 +387,21 @@ Comment: As the two strategies are explained side-by-side, it was quite hard to 
 
 #### Support Vector Machines
 
-- [x] Outline how the dual form of a support vector machine may be derived from the primal form with slack variables (but no need to memorize the dual form).
+- Outline how the dual form of a support vector machine may be derived from the primal form with slack variables (but no need to memorize the dual form).
   - ![Screenshot 2020-03-02 at 11.17.42 PM](assets/Screenshot 2020-03-02 at 11.17.42 PM.png)
   - ![Screenshot 2020-03-02 at 11.20.05 PM](assets/Screenshot 2020-03-02 at 11.20.05 PM.png)
   - ![Screenshot 2020-03-02 at 11.22.26 PM](assets/Screenshot 2020-03-02 at 11.22.26 PM.png)
   - ![Screenshot 2020-03-02 at 11.23.12 PM](assets/Screenshot 2020-03-02 at 11.23.12 PM.png)
   
-- [x] Define support vectors as feature vectors linearly combined in the optimal $\hat{\theta}$. Recognize that often, there are only a few support vectors.
+- Define support vectors as feature vectors linearly combined in the optimal $\hat{\theta}$. Recognize that often, there are only a few support vectors.
   
   - ![Screenshot 2020-03-02 at 3.50.24 PM](assets/Screenshot 2020-03-02 at 3.50.24 PM.png)
   
-- [x] Describe how the value of the multiplier $\alpha_{x,y}$ determines the position of a feature vector 𝑥 in relation to the margin of the classifier.
+- Describe how the value of the multiplier $\alpha_{x,y}$ determines the position of a feature vector 𝑥 in relation to the margin of the classifier.
   
   - ![Screenshot 2020-03-02 at 3.49.11 PM](assets/Screenshot 2020-03-02 at 3.49.11 PM.png)
   
-- [x] Write down the formula of the resulting classifier in terms of the support vectors, and its offset $\theta_0$ in terms of a boundary support vector.
+- Write down the formula of the resulting classifier in terms of the support vectors, and its offset $\theta_0$ in terms of a boundary support vector.
   
   - $(\tilde{x}, \tilde{y})$ is a support vector, $(x,y)$ is the new data. Non-support vectors are not in the classifier because its $\alpha$ is zero
   
@@ -411,9 +411,9 @@ Comment: As the two strategies are explained side-by-side, it was quite hard to 
 
 #### Kernels
 
-- [x] Describe the kernel trick as a strategy to reduce computation during training and prediction by writing them in terms of an easy-to-compute kernel as opposed to a difficult-to-compute feature map. Illustrate this with an example.
+- Describe the kernel trick as a strategy to reduce computation during training and prediction by writing them in terms of an easy-to-compute kernel as opposed to a difficult-to-compute feature map. Illustrate this with an example.
   - Refer to Polynomial and Radial Basis Kernel
-- [x] Define a kernel as a symmetric function which generates Gram matrices that are positive semidefinite. Relate kernels to similarity maps and distance maps. 
+- Define a kernel as a symmetric function which generates Gram matrices that are positive semidefinite. Relate kernels to similarity maps and distance maps. 
   - $K:\mathbb{R}^d \times \mathbb{R}^d \to \mathbb{R}$
   - $K(x,y) = K(y,x)$ for all $x, y \in \mathbb{R}^d$
   - $K(x,y) \geq 0$ for all $x, y \in \mathbb{R}^d$ 
@@ -424,27 +424,27 @@ Comment: As the two strategies are explained side-by-side, it was quite hard to 
     - $K(x,x') = \phi(x) \cdot \phi(x')$
     - However $\phi$ may be hard to find. 
   - When $K(x,y)$ is large, $x$ and $y$ is similar (and the distance is small)
-- [x] Write down the linear, polynomial and radial basis kernels.
+- Write down the linear, polynomial and radial basis kernels.
   - Linear Kernel $K(x,x') = x \cdot x'$
     - $\phi(x) = x$
   - Polynomical kernel $K(x,x') = (x \cdot x' + 1)^k$
     - For $k=2$, $\phi(x) = (1,\sqrt{2}x_1, ..., \sqrt{2} x_1 x_2, ... x_1^2, ...)$
-  - Radial Basis Kernel $K(x,x') = \exp \left( -\frac{1}{2} || x - x' ||^2 \right)$
+  - Radial Basis Kernel $K(x,x') = \exp \left( -\frac{1}{2}  \vert  \vert  x - x'  \vert  \vert ^2 \right)$
     - $\phi$ returns an infinite dimensional vector
 
 <div style="page-break-after: always;"></div>
 
 #### Kernelization
 
-- [x] Describe how to use a radial basis kernel in an SVM for training and prediction.
-  - Refer to SVM, but $K(x,x') = x \cdot x'$ should be $K(x,x') = \exp \left( -\frac{1}{2} || x - x' ||^2 \right)$
-- [x] Outline how a representation of $\theta$ as a linear combination of feature vectors $x$ can be used to derive the **kernel ridge regression**.
+- Describe how to use a radial basis kernel in an SVM for training and prediction.
+  - Refer to SVM, but $K(x,x') = x \cdot x'$ should be $K(x,x') = \exp \left( -\frac{1}{2}  \vert  \vert  x - x'  \vert  \vert ^2 \right)$
+- Outline how a representation of $\theta$ as a linear combination of feature vectors $x$ can be used to derive the **kernel ridge regression**.
   - SVM is a classifier, kernels can be used for regression.
   - $\hat{\theta}$ will be a linear combination of vectors $x$.
   - You can use other kernels instead of the linear kernel.
   - ![Screenshot 2020-03-03 at 12.55.41 AM](assets/Screenshot 2020-03-03 at 12.55.41 AM.png)
   - ![Screenshot 2020-03-03 at 12.57.37 AM](assets/Screenshot 2020-03-03 at 12.57.37 AM.png)
-- [x] Describe the pros and cons of using a higher-order kernel (e.g. radial basis kernel or polynomial kernel of high order) for classification or regression.
+- Describe the pros and cons of using a higher-order kernel (e.g. radial basis kernel or polynomial kernel of high order) for classification or regression.
   - Underfitting and overfitting (will not generalise well to unseen data).
 
 
@@ -455,30 +455,30 @@ Comment: As the two strategies are explained side-by-side, it was quite hard to 
 
 #### Probability
 
-- [x] Define the **multinomial** and multivariate Gaussian distributions. Recognize $\Sigma$ in the Gaussian distribution as the covariance matrix.
+- Define the **multinomial** and multivariate Gaussian distributions. Recognize $\Sigma$ in the Gaussian distribution as the covariance matrix.
   - $\Sigma = (\Lambda ^T \Lambda)^{-1}$
   - $\varepsilon = \Lambda x = \mathcal{N}(0,I)$
-  - $p(x|\mu, \Sigma) = (2\pi)^{d/2} (\det \Sigma)^{1/2} \exp \left\{ -\dfrac{1}{2} (x-\mu)^T \Sigma^{-1} (x-\mu) \right\}$
+  - $p(x \vert \mu, \Sigma) = (2\pi)^{d/2} (\det \Sigma)^{1/2} \exp \left\{ -\dfrac{1}{2} (x-\mu)^T \Sigma^{-1} (x-\mu) \right\}$
   - $\Sigma_{ij} = \text{Cov}(X_i, X_j) = \mathbb{E}[(X_i - \mu_i)(X_j - \mu_j)]$
-- [x] Write down the resulting multivariate Gaussian distribution after applying a change of basis to a spherical Gaussian distribution.
+- Write down the resulting multivariate Gaussian distribution after applying a change of basis to a spherical Gaussian distribution.
   - $x = \Lambda^{-1} \varepsilon \sim \mathcal{N}(0, \Sigma)$
-- [x] Define the conditional independence of $X$ and $Y$ given $Z$.
-  - $p_{X,Y|Z}(x,y | z) = p_{X|Z}(x|z) \cdot p_{Y|Z}(y|z)$ for all outcomes $x$ and $y$ and $z$.
+- Define the conditional independence of $X$ and $Y$ given $Z$.
+  - $p_{X,Y \vert Z}(x,y  \vert  z) = p_{X \vert Z}(x \vert z) \cdot p_{Y \vert Z}(y \vert z)$ for all outcomes $x$ and $y$ and $z$.
 
 
 
 #### Graph Theory 
 
-- [x] Identify the following aspects of a graph: vertex, edge, undirected graph, directed graph, adjacent, child, parent, descendent, ancestor, path, cycle, directed path, undirected path, collider, non-collider.
+- Identify the following aspects of a graph: vertex, edge, undirected graph, directed graph, adjacent, child, parent, descendent, ancestor, path, cycle, directed path, undirected path, collider, non-collider.
   - parent $\to$ child 
   - ancestor $\to$ child $\to$ something $\to$ descendant 
   - a variable is a collider when it is causally influenced by two or more variables
   
-- [x] Identify the following kinds of graphs: acyclic directed graph, complete graph, subgraph, clique, maximal clique. 
+- Identify the following kinds of graphs: acyclic directed graph, complete graph, subgraph, clique, maximal clique. 
    - clique - a complete subgraph
    - maximal clique - a clique not contained in any larger clique
    
-- [x] Define the **separation** of sets $A$ and $B$ by $C$. Define the **d-separation** of sets $A$ and $B$ by $C$.
+- Define the **separation** of sets $A$ and $B$ by $C$. Define the **d-separation** of sets $A$ and $B$ by $C$.
   
    - ![Screenshot 2020-03-03 at 1.03.44 AM](assets/Screenshot 2020-03-03 at 1.03.44 AM.png)
    - ![Screenshot 2020-03-03 at 1.03.59 AM](assets/Screenshot 2020-03-03 at 1.03.59 AM.png)
@@ -487,59 +487,59 @@ Comment: As the two strategies are explained side-by-side, it was quite hard to 
     - ![Screenshot 2020-03-01 at 2.29.47 AM](assets/Screenshot 2020-03-01 at 2.29.47 AM.png)
     - Is $X$ and $U$ d-separated (given anything other set)? 
    
-- [x] Define a graphical model as a collection of random variables with a graph defining the relationship between the variables. Recognize shaded and unshaded nodes as observed and hidden variables respectively.
+- Define a graphical model as a collection of random variables with a graph defining the relationship between the variables. Recognize shaded and unshaded nodes as observed and hidden variables respectively.
 
-- [x] Recognize directed edges as descriptions of conditional distributions. Recognize undirected edges as descriptions of joint distributions. Define Bayesian networks and Markov random fields.
+- Recognize directed edges as descriptions of conditional distributions. Recognize undirected edges as descriptions of joint distributions. Define Bayesian networks and Markov random fields.
 
 
 
 #### Bayesian Networks (Directed Graphical Models)
 
-- [x] Define a distribution satisfying the factorization property with respect to a graph using conditional distributions.
-  - $p(x_1, ..., x_k) = \Pi_{i=1}^k p(x_i | \text{parents}_i)$
-- [x] Describe ways to define multinomial distributions and Gaussian distributions which factorize with respect to a graph. Given a graph, write down the **inverse covariance** $\Lambda$ of the corresponding Gaussian using linear dependencies.
+- Define a distribution satisfying the factorization property with respect to a graph using conditional distributions.
+  - $p(x_1, ..., x_k) = \Pi_{i=1}^k p(x_i  \vert  \text{parents}_i)$
+- Describe ways to define multinomial distributions and Gaussian distributions which factorize with respect to a graph. Given a graph, write down the **inverse covariance** $\Lambda$ of the corresponding Gaussian using linear dependencies.
   - ![Screenshot 2020-03-01 at 3.07.28 AM](assets/Screenshot 2020-03-01 at 3.07.28 AM.png)
-- [x] Define the global Markov property of a distribution with respect to a graph. Determine if a statement $S \bot T \ | \ W$ is true using d-separation. 
+- Define the global Markov property of a distribution with respect to a graph. Determine if a statement $S \bot T \  \vert  \ W$ is true using d-separation. 
   - A distribution $p$ satisfies the global Markov property with respect to graph $\mathcal{G}$ if
     - for all the disjoint sets $S$,$T$,$W$ that $S$ and $T$ are d-separated given $W$
-      - $S$ and $T$ is conditionally independent given $W$ i.e. $S \bot T \ | \ W$
-- [x] Understand the Hammersley-Clifford Theorem as stating the equivalence between two ways of defining Bayesian networks.
+      - $S$ and $T$ is conditionally independent given $W$ i.e. $S \bot T \  \vert  \ W$
+- Understand the Hammersley-Clifford Theorem as stating the equivalence between two ways of defining Bayesian networks.
   - $p$ satisifies the factorisation property with respect to $\mathcal{G}$
   - $p$ satisifies the global Markov property with respect to $\mathcal{G}$
-- [x] Understand the concept of explaining away, that conditioning on a collider will lead to dependence between two parent variables.
+- Understand the concept of explaining away, that conditioning on a collider will lead to dependence between two parent variables.
   - Knowing the battery is flat explains away the observation that the gauge level is zero (there is less need to consider another explanation). Fuel level is less likely to be zero even though battery level does not affect fuel level.
 
 
 
 #### Markov Random Fields (Undirected Graphical Models) 
 
-- [x] Define a distribution satisfying the factorization property with respect to a graph using potential functions. If the distribution is strictly positive, give the definition in terms of energy functions.
+- Define a distribution satisfying the factorization property with respect to a graph using potential functions. If the distribution is strictly positive, give the definition in terms of energy functions.
   - We say $p$ satisfies the factorisation property with respect to $\mathcal{G}$ if
     $$p(x_1, ... x_k) = \dfrac{1}{z}\prod_{\text{max clique } C} \enspace \varphi_C (x_C)$$ 
     for some nonnegative potentials $\varphi_C(x_C)$ where $x_C = (x_i)_{i \in C}$ 
   - If the nonnegative potential functions $\varphi_C(x_C)$ are positive, we can write  $\varphi_C(x_C) = \exp \left\{ - E_C(x_c) \right\}$ for some energy function $E_C(x_c)$.
     Then  $p(x_1, ... x_k) = \dfrac{1}{z} \exp \left\{ -\sum_{\text{max clique }C} E_C (x_C) \right\}$
-- [x] Define the global Markov property in terms of separation.
+- Define the global Markov property in terms of separation.
   - A distribution $p$ satisifies the global Markov property with respect to graph $\mathcal{G}$ if
     - for all disjoint subsets $A$,$B$,$C$ that $A$ and $B$ are separated given $C$.
-      - $A$ and $B$ are conditionally indepedent given $C$, i.e. $A \bot B \ | \ C$ 
+      - $A$ and $B$ are conditionally indepedent given $C$, i.e. $A \bot B \  \vert  \ C$ 
   - **How did the class example $ABCD$ satisfy this?**
-- [x] Define the pairwise Markov property in terms of non-adjacency.
-  - We say that a distribution $p$ satisfies the pairwise Markov property with respect to $\mathcal{G}$ if for all non-adjacent variables $X$ and $Y$, $X \bot Y \ | \ V  \backslash \{X,Y\}$
+- Define the pairwise Markov property in terms of non-adjacency.
+  - We say that a distribution $p$ satisfies the pairwise Markov property with respect to $\mathcal{G}$ if for all non-adjacent variables $X$ and $Y$, $X \bot Y \  \vert  \ V  \backslash \{X,Y\}$
   - This is a special case of global Markov property, where the two conditionally independent sets have one element each, and are not adjacent.
   - **Isn't this like all the simple graphs?** - Seems like **you need to property** to draw the graph that way.
-- [x] Understand the Hammersley-Clifford Theorem as stating the equivalence between three ways of defining strictly positive Markov random fields.
+- Understand the Hammersley-Clifford Theorem as stating the equivalence between three ways of defining strictly positive Markov random fields.
   - If $p$ is strictly positive, then the following are equivalent.
   - $p$ satisifies the factorisation property with respect to $\mathcal{G}$
   - $p$ satisifies the global Markov property with respect to $\mathcal{G}$
   - $p$ satisifies the pairwise Markov property with respect to $\mathcal{G}$
     - Two variables that are not adjacent are independent of each other if conditioned on every other variable, because the covariance matrix of the two matrix will be a diagonal.
-- [x] Describe ways to define multinomial distributions and Gaussian distributions which factorize with respect to a graph.
+- Describe ways to define multinomial distributions and Gaussian distributions which factorize with respect to a graph.
   - ![Screenshot 2020-03-02 at 3.11.33 AM](assets/Screenshot 2020-03-02 at 3.11.33 AM.png)
-- [x] Given a graph, write down the inverse covariance of the corresponding Gaussian using the pairwise Markov property.
+- Given a graph, write down the inverse covariance of the corresponding Gaussian using the pairwise Markov property.
   - ![Screenshot 2020-03-02 at 3.27.05 AM](assets/Screenshot 2020-03-02 at 3.27.05 AM.png)
     ![Screenshot 2020-03-02 at 3.22.29 AM](assets/Screenshot 2020-03-02 at 3.22.29 AM.png)
-- [x] Recognize a Boltzmann machine as a special case of a multinomial distribution with binary variables and only two-way interactions (second-order energies).
+- Recognize a Boltzmann machine as a special case of a multinomial distribution with binary variables and only two-way interactions (second-order energies).
   - **What is a Boltzmann machine? What does it do?**
   - "only two-way interactions" - All higher-order energies can be written in terms of second-order ones.
   - With all the second order energies (each of them is a $2 \times 2$ matrix), we can write the weights in terms of the second order energies.
@@ -557,34 +557,34 @@ Comment: As the two strategies are explained side-by-side, it was quite hard to 
 
 - Compute the MLE of a statistical model given data. Write down the MLE of a multinomial model and a spherical Gaussian model.
   - Maximum likelihood estimate $\hat{\theta} = \text{argmax}_{\theta} \prod_{x \in \mathcal{S}} p(x,\theta) = \text{argmax}_{\theta} \sum_{x \in \mathcal{S}} \log p(x,\theta)$
-  - MLE of regression is concerned with $p(y|x,\theta)$.
+  - MLE of regression is concerned with $p(y \vert x,\theta)$.
   - Multinomial model to evaluate the probability of the bag of words
-    - Likelihood $p(\mathcal{S}|\theta) = \prod_{w \in W} \theta_W^{n(w)}$
+    - Likelihood $p(\mathcal{S} \vert \theta) = \prod_{w \in W} \theta_W^{n(w)}$
     - Log-likelihood $\mathcal{L}(\theta) = - \dfrac{1}{n} \sum_{w \in W} n(w) \log \theta_w$
     - MLE $\hat{\theta}_w = \dfrac{n(w)}{\sum_{w' \in W} n(w')} = \dfrac{n(w)}{n}$
   - Gaussian model
-    - Log-likelihood = $-\dfrac{1}{n} \log p(x|\mu,\sigma^2) = \dfrac{d}{2} \log(2\pi \sigma^2) + \dfrac{1}{2 \pi \sigma^2} \sum_{x \in \mathcal{S}} || x-\mu ||^2$
+    - Log-likelihood = $-\dfrac{1}{n} \log p(x \vert \mu,\sigma^2) = \dfrac{d}{2} \log(2\pi \sigma^2) + \dfrac{1}{2 \pi \sigma^2} \sum_{x \in \mathcal{S}}  \vert  \vert  x-\mu  \vert  \vert ^2$
     - MLE - mean is sample mean, variance is sample variance.
 - Design a classifier using the log likelihood ratio.
   - Compute the MLE $\theta^+$ and $\theta^-$ for the likelihoods for each of the classes (i.e. find the optimal parameters for each class). Then compute the likelihood of the new data point on the model trained on each class. We look at the sign of the ratio
-    - $\log \dfrac{p(\mathcal{S}|\theta^+)}{p(\mathcal{S}|\theta^-)} = \sum_w n(w) \log \dfrac{\theta_w^+}{\theta_w^-}$
+    - $\log \dfrac{p(\mathcal{S} \vert \theta^+)}{p(\mathcal{S} \vert \theta^-)} = \sum_w n(w) \log \dfrac{\theta_w^+}{\theta_w^-}$
   - Classifying between two Gaussian with the same variance and different means $\mu^+$ and $\mu^-$
-    - $\log \dfrac{p(x|\mu^+,\sigma)}{p(x|\mu^-,\sigma)} = x \cdot \dfrac{\mu^+ - \mu^-}{\sigma^2} - \dfrac{1}{2 \sigma^2} \left(||\mu^+||^2 - ||\mu^-||^2 \right) \\= x\theta - \theta_0$
+    - $\log \dfrac{p(x \vert \mu^+,\sigma)}{p(x \vert \mu^-,\sigma)} = x \cdot \dfrac{\mu^+ - \mu^-}{\sigma^2} - \dfrac{1}{2 \sigma^2} \left( \vert  \vert \mu^+ \vert  \vert ^2 -  \vert  \vert \mu^- \vert  \vert ^2 \right) \\= x\theta - \theta_0$
 - Define the Kullback distance as the expectation of the log likelihood ratio. Recognize that the Kullback distance is non-negative and not symmetric.
-  - $\text{KL}_w(q||p) = \mathbb{E}\left[ \log \dfrac{q(x)}{p(x)} \right] = \int q(x) \log \dfrac{q(x)}{p(x)} dx \geq 0$
+  - $\text{KL}_w(q \vert  \vert p) = \mathbb{E}\left[ \log \dfrac{q(x)}{p(x)} \right] = \int q(x) \log \dfrac{q(x)}{p(x)} dx \geq 0$
   - Distance is defined from the true distribution $q(x)$, measured in bits or nats.
 - Define the empirical distribution as that of sampling from the training data. Recognize the equivalence between maximizing the likelihood, minimizing the negative log likelihood, and minimizing the Kullback distance between the empirical distribution and the model.
   - $q_\mathcal{S}(x)$ is the empirical distribution
-  - $\text{KL}_x(q||p_{\theta}) = \sum_x q_\mathcal{S}(x) \log q_\mathcal{S} (x)- \sum_x q_\mathcal{S}(x) \log p_{\theta} (x)$
+  - $\text{KL}_x(q \vert  \vert p_{\theta}) = \sum_x q_\mathcal{S}(x) \log q_\mathcal{S} (x)- \sum_x q_\mathcal{S}(x) \log p_{\theta} (x)$
   - $- \sum_x q_\mathcal{S}(x) \log p_{\theta} (x)$ is the negative log likelihood.
-- Identify alternating minimization between the model parameters 𝜃 (weights) and the distribution of $z|x$ (states) as a common strategy for training models with latent variables.
+- Identify alternating minimization between the model parameters 𝜃 (weights) and the distribution of $z \vert x$ (states) as a common strategy for training models with latent variables.
   - Latent variables are variables which we cannot observe.
 - (**Conditional Kullback Distance** and Chain Rule not in syllabus)
   - ![Screen Shot 2020-03-07 at 04.11.13 AM](assets/Screen Shot 2020-03-07 at 04.11.13 AM.png)
   - ![Screenshot 2020-04-12 at 3.28.22 AM](assets/Screenshot 2020-04-12 at 3.28.22 AM.png)
   - Solving the green minimisation problem solves the blue minimisation problem.
-  - Expectation step - minimise $\text{KL}_x(q || p_\theta)$ by computing the soft labels with the parameter $\theta$.
-  - Maximisation step - minimise $\text{KL}_{z|x} (q||p_\theta)$ over the parameter $\theta$.
+  - Expectation step - minimise $\text{KL}_x(q  \vert  \vert  p_\theta)$ by computing the soft labels with the parameter $\theta$.
+  - Maximisation step - minimise $\text{KL}_{z \vert x} (q \vert  \vert p_\theta)$ over the parameter $\theta$.
 
 
 
@@ -599,16 +599,16 @@ Please draw the matrix and label the dimensions.
   - $X_{ai} = \theta_a^T Z_i + \varepsilon_{ai}$ where $\varepsilon \sim \mathcal{N}(0,1)$
   - $X \approx \theta^T Z \in \mathbb{R}^{n \times m}$
 - Write down the training objective for matrix factorization.
-  - Likelihood = $p(Z)p(\theta)p(X_{ai}|Z,\theta) = p(Z)p(\theta)p(\varepsilon_{ai}|Z,\theta)$
+  - Likelihood = $p(Z)p(\theta)p(X_{ai} \vert Z,\theta) = p(Z)p(\theta)p(\varepsilon_{ai} \vert Z,\theta)$
   - Training objective is the negative log likelihood
-    - $\mathcal{L}(\theta,Z|X) = \sum_{(a,i) \in \mathcal{D}} \frac{1}{2}(X_{ai} - \theta_a^T Z_i)^2 + \frac{\lambda}{2} \sum_a ||\theta_a||^2 + \frac{\lambda}{2} \sum_i ||Z_i||^2$
+    - $\mathcal{L}(\theta,Z \vert X) = \sum_{(a,i) \in \mathcal{D}} \frac{1}{2}(X_{ai} - \theta_a^T Z_i)^2 + \frac{\lambda}{2} \sum_a  \vert  \vert \theta_a \vert  \vert ^2 + \frac{\lambda}{2} \sum_i  \vert  \vert Z_i \vert  \vert ^2$
 - Describe how alternating least squares solves the matrix factorization problem.
   - Initialise $\theta$ (and $Z$) randomly. Repeat until convergence
-    - Fix $\theta$ and minimise $\mathcal{L}(\theta,Z|X)$ over $Z$ 
-    - Fix $Z$ and minimise $\mathcal{L}(\theta,Z|X)$ over $\theta$
+    - Fix $\theta$ and minimise $\mathcal{L}(\theta,Z \vert X)$ over $Z$ 
+    - Fix $Z$ and minimise $\mathcal{L}(\theta,Z \vert X)$ over $\theta$
   - Feasible because each step is a standard ridge regression problem. You can do this independently for each movie vector and user vector.
-    - $\sum_{(a,i) \in \mathcal{D}} \frac{1}{2}(X_{ai} - \theta_a^T Z_i)^2 + \frac{\lambda}{2} \sum_i ||Z_i||^2$
-    - $\sum_{(a,i) \in \mathcal{D}} \frac{1}{2}(X_{ai} - \theta_a^T Z_i)^2 + \frac{\lambda}{2} \sum_a ||\theta_a||^2$
+    - $\sum_{(a,i) \in \mathcal{D}} \frac{1}{2}(X_{ai} - \theta_a^T Z_i)^2 + \frac{\lambda}{2} \sum_i  \vert  \vert Z_i \vert  \vert ^2$
+    - $\sum_{(a,i) \in \mathcal{D}} \frac{1}{2}(X_{ai} - \theta_a^T Z_i)^2 + \frac{\lambda}{2} \sum_a  \vert  \vert \theta_a \vert  \vert ^2$
 - Describe how hyperparameters $k, \lambda$ can be found by model selection. 
   - $k$ is number of latent variables for each movie and user
   - $\lambda$ is the regulariser
@@ -624,7 +624,7 @@ Please draw the matrix and label the dimensions.
   - $\varphi(x) = \pi_1 \varphi_1(x) + \dots + \pi_k \varphi_k(x)$. The area under graph of each $\varphi$ is one, and the mixing parameters $\pi_i$ sums up to one.
 - Write down the distribution of a Gaussian mixture model and its log likelihood. Compare with the distribution and log likelihood of the fully-observed model.
   - Parameters - $\pi_i$, $\mu_i$, $\sigma_i$ for each of the $k$ spherical Gassians.
-  - Distribution $p_{\theta}(x) = \sum_Z \pi_z (2 \pi \sigma_z^2)^{d/2} \exp \left\{ -\dfrac{1}{2 \sigma_2^2} || x - \mu_z ||^2 \right\}$
+  - Distribution $p_{\theta}(x) = \sum_Z \pi_z (2 \pi \sigma_z^2)^{d/2} \exp \left\{ -\dfrac{1}{2 \sigma_2^2}  \vert  \vert  x - \mu_z  \vert  \vert ^2 \right\}$
 - Recognize that log likelihood of fully observed model is convex with unique local minima, but the latent model is non-convex with many local minima.
   - ![Screenshot 2020-03-07 at 6.05.33 PM](assets/Screenshot 2020-03-07 at 6.05.33 PM.png)
 
@@ -632,7 +632,7 @@ Please draw the matrix and label the dimensions.
 
 #### Expectation Maximization
 
-- Describe the EM algorithm as an alternating minimization algorithm where the E-step involves computing $\mathcal{L}(\theta) = \mathbb{E}\left[ \log p_{\theta} (z,x) \right] = \sum_{x \in \mathcal{S}} \int p_{\tilde{\theta}} (z|x) \log p_{\theta} (z,x) dz$ for given $\tilde{\theta}$ and the M-step involves maximising $\mathcal{L}(\theta)$ to update $\tilde{\theta}$ 
+- Describe the EM algorithm as an alternating minimization algorithm where the E-step involves computing $\mathcal{L}(\theta) = \mathbb{E}\left[ \log p_{\theta} (z,x) \right] = \sum_{x \in \mathcal{S}} \int p_{\tilde{\theta}} (z \vert x) \log p_{\theta} (z,x) dz$ for given $\tilde{\theta}$ and the M-step involves maximising $\mathcal{L}(\theta)$ to update $\tilde{\theta}$ 
 
 - Describe the EM algorithm for Gaussian mixtures, in terms of computing soft labels. Compare with the MLE of the fully observed model using hard labels. 
   - Initialise the parameters with something reasonable.
@@ -640,7 +640,7 @@ Please draw the matrix and label the dimensions.
     - $\mu_z$ of random points, or from k-means clustering
     - $\sigma_z^2 = \sigma^2$ all sample variance.![Screenshot 2020-03-07 at 10.26.30 PM](assets/Screenshot 2020-03-07 at 10.26.30 PM.png)
       ![Screenshot 2020-03-07 at 10.27.24 PM](assets/Screenshot 2020-03-07 at 10.27.24 PM.png)
-  - If the observed labels have been observed, you will have the hard binary labels $\delta(z|x)$ instead of soft probability label $p_\theta (z|x)$. Understand the concept "effective".
+  - If the observed labels have been observed, you will have the hard binary labels $\delta(z \vert x)$ instead of soft probability label $p_\theta (z \vert x)$. Understand the concept "effective".
   
   ```python
   def E_step():
@@ -706,7 +706,7 @@ Please draw the matrix and label the dimensions.
 
 
 - **Kullback-Leibler divergence** of of two discrete distributions $p$ and $q$
-  - $D_{KL} (p|q) = H(p,q) - H(p,p) = \sum_i p_i \log \dfrac{p_i}{q_i}$
+  - $D_{KL} (p \vert q) = H(p,q) - H(p,p) = \sum_i p_i \log \dfrac{p_i}{q_i}$
   - KL divergence measures the number of extra bits required to transmit X with distribution $p$, as compared to the optimal code, when we use the sub-optimal coding scheme associated with distribution $q$.
 
 
@@ -939,7 +939,7 @@ Given sufficient data, $\phi_0$ and $\phi_1$ can be found with linear regression
 Proof of weak conditionality (please understand)
 - $\mathbb{E}[r_t] = \mu = \dfrac{\phi_0}{1-\phi_1}$
 - $\gamma(s) = \text{Cov}[r_t, r_{t-s}]$
-- Weak conditionality if $|\phi_1| < 1$
+- Weak conditionality if $ \vert \phi_1 \vert  < 1$
   - You can show this by recurviely subtituting
 - $\text{Var}(r_t) = \dfrac{\sigma_a^2}{1-\phi_1^2}$
 
@@ -1038,7 +1038,7 @@ Use MLE to find optimal parameters.
 
 Is the "inverse covariance matrix" the inverse of covariance matrix?
 
-Conditional distribution in the continuous case $p(y|x) = \dfrac{p(y,x)}{p(x)}$ - how to interpret this?
+Conditional distribution in the continuous case $p(y \vert x) = \dfrac{p(y,x)}{p(x)}$ - how to interpret this?
 
 
 
@@ -1090,7 +1090,7 @@ If we are interested in the unconditioned marginal distribution of $x_a$, simply
 
 ### Conditional distribution
 
-We are interested in $\mu_{a|b}$ and $\Sigma_{a|b}$ as we want to model the distribution of $x_{a|b}$.
+We are interested in $\mu_{a \vert b}$ and $\Sigma_{a \vert b}$ as we want to model the distribution of $x_{a \vert b}$.
 
 We set $x_b$ to a constant and compare the expressions.
 
@@ -1098,7 +1098,7 @@ We set $x_b$ to a constant and compare the expressions.
 
 ![Screenshot 2020-04-05 at 2.08.58 PM](assets/Screenshot 2020-04-05 at 2.08.58 PM.png)
 
-We want to express $\mu_{a|b}$ and $\Sigma_{a|b}$ in terms of $\mu$ and $\Sigma$, so we use an expression that was covered in the homework.
+We want to express $\mu_{a \vert b}$ and $\Sigma_{a \vert b}$ in terms of $\mu$ and $\Sigma$, so we use an expression that was covered in the homework.
 
 ![Screenshot 2020-04-05 at 2.10.09 PM](assets/Screenshot 2020-04-05 at 2.10.09 PM.png)
 
@@ -1131,7 +1131,7 @@ In essence, if $x$ is close to $y$, x should be strongly correlated to $y$.
 Linear regression
 
 $$
-p(y|f(x)) \sim \mathcal{N}(f(x), \tau^2)
+p(y \vert f(x)) \sim \mathcal{N}(f(x), \tau^2)
 $$
 
 Modelling $f$ with a Gaussian process distribution, with kernel $K$
@@ -1483,7 +1483,7 @@ The policy function, the state-value and action-value function is independent of
 
 
 
-**Policy function** $\pi(a|s)$
+**Policy function** $\pi(a \vert s)$
 
 - the probability that $A_t = a$ given that $S_t = s$ 
 
@@ -1493,7 +1493,7 @@ The policy function, the state-value and action-value function is independent of
 
 **State-value function** $v_\pi(x)$ for given policy $\pi$
 
-- $v_{\pi}(s) = \mathbb{E}[G_t | S_t = s]$
+- $v_{\pi}(s) = \mathbb{E}[G_t  \vert  S_t = s]$
 
 Terminal states has a value of 0.
 
@@ -1503,7 +1503,7 @@ Terminal states has a value of 0.
 
 **Action-value function** $q_\pi (s,a)$ for given policy $\pi$
 
-- $q_\pi (s,a) = \mathbb{E}[G_t | S_t = s, A_t = a]$
+- $q_\pi (s,a) = \mathbb{E}[G_t  \vert  S_t = s, A_t = a]$
 
 
 
@@ -1515,7 +1515,7 @@ Terminal states has a value of 0.
 
 
 
-This will be a system of $|S|$ equations with $|S|$ unknowns, one for each state-value function. This can be solved with linear algebra. This will compute the state-values **given a policy**.
+This will be a system of $ \vert S \vert $ equations with $ \vert S \vert $ unknowns, one for each state-value function. This can be solved with linear algebra. This will compute the state-values **given a policy**.
 
 How do you **compute the action-values** given a policy?
 
@@ -1545,7 +1545,7 @@ $q_{*}(s,a) = \max_\pi q_\pi (s,a)$
 
 **Iterative policy evaluation**
 
-When $|S|$ is small, we can directly solve the linear equations. However, when the state space is large, we need to use iteration.
+When $ \vert S \vert $ is small, we can directly solve the linear equations. However, when the state space is large, we need to use iteration.
 
 ![Screenshot 2020-04-21 at 2.10.56 AM](assets/Screenshot 2020-04-21 at 2.10.56 AM.png)
 

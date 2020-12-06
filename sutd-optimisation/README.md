@@ -45,7 +45,7 @@ Instructors - Selin, Xingyin
 
 
 <div style="page-break-after: always;"></div>
-# Midterms revision notes
+# Linear Programming Procedure
 
 Procedure of solving a problem with linear programming.
 
@@ -75,12 +75,8 @@ Procedure of solving a problem with linear programming.
 - Consider edge cases as well **[G]** and multiple solutions **[H]**
 
 
-
-**Remainder of the course**
-
 - **[I]** Dual problems
-- **[J]** Games
-- **[K]** Graphs
+
 
 <div style="page-break-after: always;"></div>
 ## [0] Definitions
@@ -245,7 +241,7 @@ Remove the slack variables, and continue Phase II with the original objective fu
 
 We start with the **canonical form**.
 
-- You can read off a **basic feasible solution **(BFS). 
+- You can read off a **basic feasible solution** (BFS). 
   - The non-basis variables are zero
   - The basis variables is equal to the RHS.
   - The objective value is the RHS of $z$.
@@ -296,7 +292,7 @@ calculate-allowable-change.png
 ![edge-cases](assets/edge-cases.png)
 
 <div style="page-break-after: always;"></div> 
-# [I] Dual problem 
+## [I] Dual problem 
 
 **Definitions**
 
@@ -382,8 +378,6 @@ For a pair of primal problem P and dual problem D, exactly one of the following 
 <div style="page-break-after: always;"></div> 
 **Formulating the dual of a general LP**
 
-linear-programming-dual-transformation.png
-
 ![linear-programming-dual-transformation](assets/linear-programming-dual-transformation.png)
 
 
@@ -400,7 +394,7 @@ linear-programming-dual-formulation.png
 
 Please also understand the optional component in W4L2 on restoring feasibility after adding a constraint.
 <div style="page-break-after: always;"></div> 
-# [J] Games
+# Games
 
 **Two-player zero-sum game**
 
@@ -441,11 +435,14 @@ Intuition - the opponent will detect the strategy, and the guaranteed payoff wil
 
 <img src="assets/zero-sum-game-mixed-strategies.png" alt="zero-sum-game-mixed-strategies" style="zoom: 67%;" />
 
-Solution: $$
+Solution: 
+
+$$
 p_1 = 7/18, \enspace 
 p_2 = 5/8, \enspace 
 p_3 = 1/3, \enspace
-z = 1/9$$
+z = 1/9
+$$
 
 <div style="page-break-after: always;"></div> 
 **The linear programming problem for row player**
@@ -461,6 +458,7 @@ p_1, p_2, p_3 &\geq 0
 $$
 
 where
+
 $$
 \begin{alignat*}{4}
 E(C_1) & {}={} &-2p_1 & {}+{} &2p_2 &{}+{} &p_3 \\
@@ -471,6 +469,7 @@ $$
 
 
 Formulating as a linear programming problem
+
 $$
 \begin{align}
 \max z& \\
@@ -487,6 +486,7 @@ $$
 **The linear programming problem for column player**
 
 Objective: minimise the guaranteed payoff of column player
+
 $$
 \begin{align}
 \min \max\{E(R_1),E(R_2),E(R_3)\} \\ 
@@ -507,6 +507,7 @@ E(R_3) & {}={} & 2q_1 & {} {} &    &{}-{} &2q_3
 $$
 
 Formulating as a linear programming problem
+
 $$
 \begin{align}\min v& \\
 E(R_1) &\leq v\\
@@ -534,7 +535,7 @@ You can use a graphical solution. The maximum is a piecewise function with a max
 Each player can decide on a combination of decisions **before** the games commence. (Example from cohort - combinations of decisions of whether to pass or bet on head and tails). The strategy is to assign a probability to each combination.
 
 <div style="page-break-after: always;"></div> 
-# [K] Graphs
+# Graphs
 
 **Directed graph and undirected graph**
 
@@ -605,7 +606,7 @@ Three set of variables
 
 
 <div style="page-break-after: always;"></div>
-# Finals revision notes
+# Taxonomy of network problems
 
 **Taxonomy** of network problems (and methods)
 
@@ -647,9 +648,6 @@ Three set of variables
 
 
 <div style="page-break-after: always;"></div>
-[TOC]
-
-<div style="page-break-after: always;"></div>
 # The max-flow problem
 
 Given a directed network $G = (V,E)$ and a source node $s$, a sink node $t$, and a possibly infinite capacity $u_{ij}$ for each arc $(i,j)$
@@ -663,6 +661,7 @@ The max-flow problem is the problem of finding a value of flow for every arc in 
 
 
 Formulation of the Linear Program
+
 $$
 \begin{align}
 
@@ -856,7 +855,7 @@ These are the numbers that you need to keep track of
     - **Reduced cost** $\bar{c}_{ij}$
       - The reduced cost of every nonbasic arc is calculated
         - (The reduced cost of every basic arc is zero)
-      - $\bar{c}_{ij} = c_{ij}- y_i + y_j$
+      - $\bar{c}_{ij} = c_{ij} - y_i + y_j$
       - Initial cost minus decrease in simplex multiplier down the direction of the edge
 
 <div style="page-break-after: always;"></div>
@@ -1025,10 +1024,10 @@ You solve the LP relaxation. If the optimum solution is not all integers, you fi
 
 #### Knapsack cover inequality
 
-You observe a subset $S$ with $|S|$ elements such that its weights is larger than the limit. The **knapsack cover inequality** prevents you from choosing all of these elements, you can choose at most $|S| - 1$ elements from $S$.
+You observe a subset $S$ with $\vert S \vert$ elements such that its weights is larger than the limit. The **knapsack cover inequality** prevents you from choosing all of these elements, you can choose at most $\vert S \vert - 1$ elements from $S$.
 
 $$
-\sum_{j \in S} x_j \leq |S| - 1
+\sum_{j \in S} x_j \leq \vert S \vert - 1
 $$
 
 A **minimal cover** is a cover that $|S| - 1$ of its elements has a weight below the limit. Using minimal covers is usually useful.
@@ -1111,7 +1110,7 @@ There is only one **state** for each stage. So we not specify the state.
 
 The **value** function $f(k)$ indicates whether player one will win if the game starts with $n$ matches. 
 
-The **recursion** $f(k) = 1-\min\{1, f_{k-1}, f_{k-2}, f_{k-6}\}$
+The **recursion** $f(k) = 1-\min\lbrace 1, f_{k-1}, f_{k-2}, f_{k-6} \rbrace$
 
 The **boundary condition** $f(1) = f(2) = f(4) = f(5) = f(6) = 1$ and $f(3) = 0$.
 
@@ -1127,7 +1126,7 @@ Each **state** $j$ is the current node.
 
 The **value** function $f_k(j)$ is the cost of the path from the starting node to the node ended.
 
-The **recursion** $f_k(j) = \min \{ f_{k-1} (j), \min_{(i,j) \in A}\{ f_{k-1} (i) + c_ij  \} \}$
+The **recursion** $f_k(j) = \min \lbrace f_{k-1} (j), \min_{(i,j) \in A}\lbrace f_{k-1} (i) + c_ij  \rbrace \rbrace$
 You either do not move, or you move from another location and incur the cost.
 
 The **boundary condition** $f_0(1) = 0$ and for **other node**s $f_0(j) = \infty$
