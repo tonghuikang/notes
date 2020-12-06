@@ -4,10 +4,9 @@ Instructors - Shaowei, Nengli
 
 * auto-gen TOC:
 {:toc}
-
-<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
-<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true}}); </script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>window.MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}};</script>
 
 ## Course Overview
 
@@ -34,7 +33,11 @@ Resources
 - [Lecture videos](https://www.youtube.com/playlist?list=PLT9axpKGZUPT3tRicTypkjxMj3sbCxTzL)
 
 
+Textbooks
 
+- ([Bishop](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf#page=13)) Pattern Recognition and Machine Learning, Christopher Bishop
+- ([Tsay](http://matematicaeducativa.com/foro/download/file.php?id=1939&sid=4874ce61c124b03eb841e58a71aaeceb)) Analysis of Financial Time Series, 3rd Edition, Tsay 
+- ([Sutton](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf#page=3)) Reinforcement Learning: An Introduction, Sutton and Barto
 
 
 Textbook sections
@@ -53,11 +56,7 @@ Textbook sections
  12   | Multi-armed Bandit           | Sutton | 1-2       
  13   | Markov decision processes    | ?      | ?         
 
-(Bishop) Pattern Recognition and Machine Learning, Christopher Bishop, https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf#page=13
 
-(Tsay) Analysis of Financial Time Series, 3rd Edition, Tsay http://matematicaeducativa.com/foro/download/file.php?id=1939&sid=4874ce61c124b03eb841e58a71aaeceb
-
-(Sutton) Reinforcement Learning: An Introduction, Sutton and Barto https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf#page=3
 
 ### Development Environment
 
