@@ -4,9 +4,10 @@ Instructors - Selin, Xingyin
 
 * auto-gen TOC:
 {:toc}
-
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
-<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true}}); </script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true}}, TeX: {
+  extensions: ["mediawiki-texvc.js"]
+}); </script>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 ## Course Overview
@@ -85,15 +86,18 @@ Procedure of solving a problem with linear programming.
 ## [0] Definitions
 
 "**General**" linear program (one if the objective function is linear and the constraints are linear equalities or inequalities). 
+
 $$
 \begin{align*}
 max/min &\quad \vec{c}^T\vec{x} \\
 s.t. &\quad \vec{a}_i^T\vec{x} \enspace \geq / =/\leq \enspace b_i \quad \forall i \\
 \end{align*}
 $$
+
 Note that all inequalities **<u>are non-strict.</u>** Please transform all strict inequalities to non-strict inequalities.
 
 **Standard** form of a linear program
+
 $$
 \begin{align*}
 max \quad \vec{c}^T \vec{x} \\
@@ -101,7 +105,9 @@ s.t. \quad A\vec{x} &= \vec{b} \geq \vec{0} \\
 \vec{x} &\geq 0
 \end{align*}
 $$
+
 **Canonical** form of a linear program - variables and constraints of $x$ can permuted to represented in this way
+
 $$
 \begin{array}{r@{}cl}
 max \quad c_N x_N  &+k \\
@@ -110,7 +116,7 @@ max \quad c_N x_N  &+k \\
 \end{array}
 $$
 
-One basic feasible solution can be read off the canonical form, with $x_b = b$  and $x_N = 0$, with the objective value equal to $k$.
+One basic feasible solution can be read off the canonical form, with $x_b = b$ and $x_N = 0$, with the objective value equal to $k$.
 
 If $c_N$ is nonnegative, the basic feasible solution is an optimal solution.
 
@@ -127,16 +133,19 @@ This includes the least-squares best-fit line.
 
 **Converting linear absolute residuals into a linear program.** 
 
-The problem: Minimize $\Sigma_{i=1}^6 |\epsilon_i|$, where $\epsilon$ is a linear expression of decision variables (in this case, the intercept and slope of two variables).
+The problem: Minimize $\Sigma_{i=1}^6 \vert \epsilon_i \vert$, where $\epsilon$ is a linear expression of decision variables (in this case, the intercept and slope of two variables).
 
 **Solution 1**
 Minimise $\Sigma_{i=1}^6 r_i^-, + r_i^+$
 
 where 
+
 $$
 \epsilon = r_i^- - r_i^+
 $$
+
 with
+
 $$
 r_i^-, r_i^+ \geq 0
 $$
@@ -146,6 +155,7 @@ $$
 **Solution 2**
 Minimise $\Sigma_{i=1}^6 z_i$
 with 
+
 $$
 \begin{align}
 \epsilon_i &\leq z_i \\
@@ -157,13 +167,14 @@ $$
 
 **Converting maximum absolute residual into a linear program**.
 
-The problem: Minimize $max(|\epsilon_i| \enspace \forall i)$
+The problem: Minimize $max(\vert \epsilon_i \vert \enspace \forall i)$
 
 **Solution**
 
 Minimise $r$. 
 
 For all $i$,
+
 $$
 \begin{align}
 r &\geq \epsilon_i \\
@@ -188,19 +199,19 @@ The linear program finds the optimal values of $b_0$, $b_1$, $b_2$ and $r$(s) th
 
 - If the constant of the equality or inequality is negative - please flip all the cofficients of the inequality:
 
-  $$a_1 x_1 + ... a_n x_n \leq b < 0 \enspace \rarr \enspace -a_1 x_1 ... - a_n x_n \geq b' > 0$$
+  $$a_1 x_1 + ... a_n x_n \leq b < 0 \enspace \rightarrow \enspace -a_1 x_1 ... - a_n x_n \geq b' > 0$$
 
 - If the condition is a $\geq$ inequality, for the inequality add a nonnegative slack variable:
 
-  $$a_1 x_1 + ... a_n x_n \geq b \enspace \rarr \enspace a_1 x_1 ... + a_n x_n + s_g = b \enspace \text{and} \enspace s_g \geq 0$$
+  $$a_1 x_1 + ... a_n x_n \geq b \enspace \rightarrow \enspace a_1 x_1 ... + a_n x_n + s_g = b \enspace \text{and} \enspace s_g \geq 0$$
 
 - If the condition is a $\leq$ inequality, for the inequality add a nonnegative slack variable:
 
-  $$a_1 x_1 + ... a_n x_n \leq b \enspace \rarr \enspace a_1 x_1 ... + a_n x_n - s_l = b \enspace \text{and} \enspace s_l \geq 0$$
+  $$a_1 x_1 + ... a_n x_n \leq b \enspace \rightarrow \enspace a_1 x_1 ... + a_n x_n - s_l = b \enspace \text{and} \enspace s_l \geq 0$$
 
 - If there are free variables like $x_f$, you have to create **two** slack variables which are greater-or-equal-to zero
 
-  $$x_f \rarr x_f^+ - x_f^-$$ for all appearance of $x_f$ in the all the equality constraints and objective function
+  $$x_f \rightarrow x_f^+ - x_f^-$$ for all appearance of $x_f$ in the all the equality constraints and objective function
   Also, add the inequality $x_f^+, x_f^- \geq 0$
 
 <div style="page-break-after: always;"></div> 
@@ -345,7 +356,7 @@ Condition
 Result
 - $c^{T} \bar{x} \leq b^{T} \bar{y}$.
 
-One of the intuitions - Suppose that $x^{*}$ is optimal to the primal, then $x^{*}$ is feasible to the relaxation.
+One of the intuitions - Suppose that $x^*$ is optimal to the primal, then $x^*$ is feasible to the relaxation.
 
 
 
@@ -941,12 +952,15 @@ Strategy - transform the problem into ORs and ANDs.
 
 
 **Modelling less-than-or-greater-than (non-convex) inequality**
+
 $$
 x\leq2 
 \quad \text{or} \quad 
 x \geq 6
 $$
+
 You can turn off either constraint by adding a binary variable $w_i$ with a big $M$.
+
 $$
 x \leq 2 + M w 
 \quad \text{and} \quad 
@@ -1012,9 +1026,11 @@ You solve the LP relaxation. If the optimum solution is not all integers, you fi
 #### Knapsack cover inequality
 
 You observe a subset $S$ with $|S|$ elements such that its weights is larger than the limit. The **knapsack cover inequality** prevents you from choosing all of these elements, you can choose at most $|S| - 1$ elements from $S$.
+
 $$
 \sum_{j \in S} x_j \leq |S| - 1
 $$
+
 A **minimal cover** is a cover that $|S| - 1$ of its elements has a weight below the limit. Using minimal covers is usually useful.
 
 #### Gomory cuts
