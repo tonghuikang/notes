@@ -310,27 +310,26 @@ conda install nb_conda jupyter ipykernel -y
   - Input for every cell
     - cell state $C_{t-1}$
     - concatenate of output state $h_{t-1}$ and input vector $x_t$ 
-      - Output for every cell
-        - cell state $C_t$
-        - output state $h_{t}$  
-      - Update cell state
-        - $C_t = f_t \star C_{t-1} + i_t \star \tilde{C}_t$
-        - Selective forget
-      - $f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)$
-            - **What to forget** (A kind of attention)
-                - Key matrix $W_f$, Query vector $[h_{t-1}, x_t]$
-                - Outputs a 0-to-1 vector
-                - Applied on previous state $C_{t-1}$ to forget
-        
-        - Selective remember
-          - $i_t = \sigma(W_t \cdot [h_{t-1}, x_t] + b_i)$
-            - **What to remember** (A kind of attention)
-            - Key matrix $W_t$, Query vector $[h_{t-1},x_t]$
-            - Outputs a 0-to-1 vector
-          - $\tilde{C}_t = \tanh(W_C \cdot [h_{t-1}, x_t] + b_C)$
-            - **How much to remember** (A kind of attention)
-        - Key matrix $W_c$. Query vector $[h_{t-1},x_t]$
-        - Outputs a -1-to-1 vector
+  - Output for every cell
+    - cell state $C_t$
+    - output state $h_{t}$  
+  - Update cell state
+    - $C_t = f_t \star C_{t-1} + i_t \star \tilde{C}_t$
+  - Selective forget
+    - $f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)$
+         - **What to forget** (A kind of attention)
+      - Key matrix $W_f$, Query vector $[h_{t-1}, x_t]$
+      - Outputs a 0-to-1 vector
+    - Applied on previous state $C_{t-1}$ to forget
+  - Selective remember
+    - $i_t = \sigma(W_t \cdot [h_{t-1}, x_t] + b_i)$
+      - **What to remember** (A kind of attention)
+      - Key matrix $W_t$, Query vector $[h_{t-1},x_t]$
+      - Outputs a 0-to-1 vector
+    - $\tilde{C}_t = \tanh(W_C \cdot [h_{t-1}, x_t] + b_C)$
+      - **How much to remember** (A kind of attention)
+      - Key matrix $W_c$. Query vector $[h_{t-1},x_t]$
+      - Outputs a -1-to-1 vector
     - $i_t \star \tilde{C}_t$ is added to the cell state.
   - Selective output
     - $o_t = \sigma(W_o \cdot [h_{t-1}, x_t] + b_o)$
