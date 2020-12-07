@@ -86,7 +86,7 @@ Procedure of solving a problem with linear programming.
 $$
 \begin{align*}
 max/min &\quad \vec{c}^T\vec{x} \\
-s.t. &\quad \vec{a}_i^T\vec{x} \enspace \geq / =/\leq \enspace b_i \quad \forall i \\
+s.t. &\quad \vec{a}_i^T\vec{x} \enspace \geq \text{or} = \text{or} \leq \enspace b_i \quad \forall i \\
 \end{align*}
 $$
 
@@ -96,7 +96,7 @@ Note that all inequalities **<u>are non-strict.</u>** Please transform all stric
 
 $$
 \begin{align*}
-max \quad \vec{c}^T \vec{x} \\
+\max \quad \vec{c}^T \vec{x} \\
 s.t. \quad A\vec{x} &= \vec{b} \geq \vec{0} \\
 \vec{x} &\geq 0
 \end{align*}
@@ -106,7 +106,7 @@ $$
 
 $$
 \begin{array}{r@{}cl}
-max \quad c_N x_N  &+k \\
+\max \quad c_N x_N  &+k \\
 \quad x_B + A_N x_N &=& b \\
 \quad x_B, x_N &\geq& 0
 \end{array}
@@ -163,7 +163,7 @@ $$
 
 **Converting maximum absolute residual into a linear program**.
 
-The problem: Minimize $max(\vert \epsilon_i \vert \enspace \forall i)$
+The problem: Minimize $\max(\vert \epsilon_i \vert \enspace \forall i)$
 
 **Solution**
 
@@ -215,7 +215,7 @@ The linear program finds the optimal values of $b_0$, $b_1$, $b_2$ and $r$(s) th
 
 **PHASE I** - Transforming the **standard form** to the **canonical form**
 $$
-max\left\{ cx | A\vec{x} = \vec{b} \geq \vec{0}, \vec{x} \geq 0 \right\}
+\max\left\{ cx | A\vec{x} = \vec{b} \geq \vec{0}, \vec{x} \geq 0 \right\}
 $$
 $A$ is made up of $n$ linearly independent rows.
 
@@ -300,7 +300,7 @@ Given an "primal" LP (expressed in this form)
 
 $$
 \begin{align}
-max \enspace c^T x& \\
+\max \enspace c^T x& \\
 Ax& \leqslant b \\
 x& \geqslant 0
 \end{align}

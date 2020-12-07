@@ -1531,7 +1531,7 @@ $v_\pi (s) \geq v_{\pi'} (s)$ for all $s \in \mathcal{S}$
 
 **Optimal state-value function**
 
-$$v_{*}(s) $$$$$= \max_\pi v_\pi (s) = \max_a q_*(s,a)$$
+$$v_{*}(s) $$$$= \max_\pi v_\pi (s) = \max_a q_*(s,a)$$
 
 **Optimal action-value function**
 
