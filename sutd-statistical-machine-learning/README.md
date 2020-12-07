@@ -23,7 +23,7 @@ Instructors - Shaowei, Nengli
 Shaowei's background
 - Spiking neural networks (for energy efficient training)
 - Machine reasoning
-- You can start a tuition centre and earn $10k/month, but this life is easy and meaningless. You want to try something big, if it failed at least you have tried.
+- Anyone capable can start a tuition centre and earn $10k/month, but this life is easy and meaningless. You want to try something big, if it fails, at least you have tried.
 
 
 Resources
@@ -108,7 +108,7 @@ conda install nb_conda jupyter ipykernel -y
     - $\mathcal{L}(\theta) = \frac{1}{2} (y-\theta^T x)^2 = \text{Loss}( y - \theta^T x)$ where $\text{Loss}(z) = \frac{1}{2} z^2$
   - Risk $\mathcal{R}(\theta \vert p)$ - Expected loss given true distribution $p(x,y)$ which is unknown.
     - $\int \mathcal{L}(0;(x,y)) \enspace p(x,y) \enspace dx \enspace dy$
-  - Emprirical Risk $\mathcal{R}(\theta \vert  \mathcal{S})$ - Estimated risk given data $\mathcal{S}$ (which can be training data $\mathcal{S}_n,$ validation data $\mathcal{S}_{val}$ or test data $\mathcal{S}_*$)
+  - Emprirical Risk $$\mathcal{R}(\theta \vert  \mathcal{S})$$ - Estimated risk given data $$\mathcal{S}$$ (which can be training data $$\mathcal{S}_n,$$ validation data $$\mathcal{S}_{val}$$ or test data $$\mathcal{S}_*$$)
   - Decision $\hat{\theta}(S_n)$ Action chosen based on data $\mathcal{S}_n$
 - Give examples of different kinds of loss functions.
   - squared loss (L2), absolute loss (L1), zero-one loss (L0), negative log-likelihood
@@ -204,7 +204,7 @@ conda install nb_conda jupyter ipykernel -y
   - Link function $g(\mathbb{E}[y \vert x]) = \theta^T x$ 
     - $g(z) = f^{-1}(z) =  \text{sigmoid}^{-1}(z) = \log \dfrac{z}{1-z}$ 
   - Training objective is to minimise negative log likelihood $\mathcal{L}(\theta \vert \mathcal{S}_n)$
-    - $\mathcal{L}(\theta \vert \mathcal{S}_n) = \dfrac{1}{n}\sum_{(x,y) \in \mathcal{S}_n} \text{Loss}\left((2y-1)(\theta^T x)\right)$
+    - $$\mathcal{L}(\theta \vert \mathcal{S}_n) = \dfrac{1}{n}\sum_{(x,y) \in \mathcal{S}_n} \text{Loss}\left((2y-1)(\theta^T x)\right)$$
     - $\text{Loss}(z) = \log(1 + e^{-z})$
   - Training gradient is the average of point gradients
     - Point gradient $\dfrac{\delta}{\delta \theta} \text{Loss}\left((2y-1)(\theta^T x)\right) = x(f(x \vert \theta) - y)$
@@ -217,7 +217,7 @@ conda install nb_conda jupyter ipykernel -y
   - Logistic regression is the case when the number of labels is two.
 - Write down the model in softmax regression. Define the softmax function. Explain why the last column of the matrix of parameters may be set to zero.
   - Model vector of $k$ probabilities $p(y \vert x,\theta) = \text{softmax}(\theta^T x)$
-  - $\text{softmax}(z)_j = \dfrac{\exp z_j}{\sum_{l=1}^k \exp z_l}$
+  - $$\text{softmax}(z)_j = \dfrac{\exp z_j}{\sum_{l=1}^k \exp z_l}$$
   - Dimensions of parameter $\theta \in \mathbb{R}^{d \times k}$
   - As adding a constant to any entire row does not change the model, the last column may be subtracted from every column without changing the model, the last column may be set to zero.
 - Write down softmax regression as a generalized linear model
@@ -325,7 +325,7 @@ conda install nb_conda jupyter ipykernel -y
       - **What to remember** (A kind of attention)
       - Key matrix $W_t$, Query vector $[h_{t-1},x_t]$
       - Outputs a 0-to-1 vector
-    - $\tilde{C}_t = \tanh(W_C \cdot [h_{t-1}, x_t] + b_C)$
+    - $$\tilde{C}_t = \tanh(W_C \cdot [h_{t-1}, x_t] + b_C)$$
       - **How much to remember** (A kind of attention)
       - Key matrix $W_c$. Query vector $[h_{t-1},x_t]$
       - Outputs a -1-to-1 vector
@@ -456,7 +456,7 @@ Comment: As the two strategies are explained side-by-side, it was quite hard to 
 - Define the **multinomial** and multivariate Gaussian distributions. Recognize $\Sigma$ in the Gaussian distribution as the covariance matrix.
   - $\Sigma = (\Lambda ^T \Lambda)^{-1}$
   - $\varepsilon = \Lambda x = \mathcal{N}(0,I)$
-  - $p(x \vert \mu, \Sigma) = (2\pi)^{d/2} (\det \Sigma)^{1/2} \exp \left\{ -\dfrac{1}{2} (x-\mu)^T \Sigma^{-1} (x-\mu) \right\}$
+  - $p(x \vert \mu, \Sigma) = (2\pi)^{d/2} (\det \Sigma)^{1/2} \exp \left\lbrace -\dfrac{1}{2} (x-\mu)^T \Sigma^{-1} (x-\mu) \right\rbrace$
   - $\Sigma_{ij} = \text{Cov}(X_i, X_j) = \mathbb{E}[(X_i - \mu_i)(X_j - \mu_j)]$
 - Write down the resulting multivariate Gaussian distribution after applying a change of basis to a spherical Gaussian distribution.
   - $x = \Lambda^{-1} \varepsilon \sim \mathcal{N}(0, \Sigma)$
@@ -515,15 +515,15 @@ Comment: As the two strategies are explained side-by-side, it was quite hard to 
   - We say $p$ satisfies the factorisation property with respect to $\mathcal{G}$ if
     $$p(x_1, ... x_k) = \dfrac{1}{z}\prod_{\text{max clique } C} \enspace \varphi_C (x_C)$$ 
     for some nonnegative potentials $\varphi_C(x_C)$ where $x_C = (x_i)_{i \in C}$ 
-  - If the nonnegative potential functions $\varphi_C(x_C)$ are positive, we can write  $\varphi_C(x_C) = \exp \left\{ - E_C(x_c) \right\}$ for some energy function $E_C(x_c)$.
-    Then  $p(x_1, ... x_k) = \dfrac{1}{z} \exp \left\{ -\sum_{\text{max clique }C} E_C (x_C) \right\}$
+  - If the nonnegative potential functions $\varphi_C(x_C)$ are positive, we can write  $$\varphi_C(x_C) = \exp \left\lbrace - E_C(x_c) \right\rbrace$$ for some energy function $E_C(x_c)$.
+    Then $$p(x_1, ... x_k) = \dfrac{1}{z} \exp \left\lbrace - \sum_{\text{max clique }C} E_C (x_C) \right\rbrace$$
 - Define the global Markov property in terms of separation.
   - A distribution $p$ satisifies the global Markov property with respect to graph $\mathcal{G}$ if
     - for all disjoint subsets $A$,$B$,$C$ that $A$ and $B$ are separated given $C$.
       - $A$ and $B$ are conditionally indepedent given $C$, i.e. $A \bot B \  \vert  \ C$ 
   - **How did the class example $ABCD$ satisfy this?**
 - Define the pairwise Markov property in terms of non-adjacency.
-  - We say that a distribution $p$ satisfies the pairwise Markov property with respect to $\mathcal{G}$ if for all non-adjacent variables $X$ and $Y$, $X \bot Y \  \vert  \ V  \backslash \{X,Y\}$
+  - We say that a distribution $p$ satisfies the pairwise Markov property with respect to $\mathcal{G}$ if for all non-adjacent variables $X$ and $Y$, $X \bot Y \  \vert  \ V  \backslash \lbrace X,Y \rbrace$
   - This is a special case of global Markov property, where the two conditionally independent sets have one element each, and are not adjacent.
   - **Isn't this like all the simple graphs?** - Seems like **you need to property** to draw the graph that way.
 - Understand the Hammersley-Clifford Theorem as stating the equivalence between three ways of defining strictly positive Markov random fields.
@@ -554,12 +554,12 @@ Comment: As the two strategies are explained side-by-side, it was quite hard to 
 #### Kullback Distance
 
 - Compute the MLE of a statistical model given data. Write down the MLE of a multinomial model and a spherical Gaussian model.
-  - Maximum likelihood estimate $\hat{\theta} = \text{argmax}_{\theta} \prod_{x \in \mathcal{S}} p(x,\theta) = \text{argmax}_{\theta} \sum_{x \in \mathcal{S}} \log p(x,\theta)$
+  - Maximum likelihood estimate $$\hat{\theta} = \text{argmax}_{\theta} \prod_{x \in \mathcal{S}} p(x,\theta) = \text{argmax}_{\theta} \sum_{x \in \mathcal{S}} \log p(x,\theta)$$
   - MLE of regression is concerned with $p(y \vert x,\theta)$.
   - Multinomial model to evaluate the probability of the bag of words
     - Likelihood $p(\mathcal{S} \vert \theta) = \prod_{w \in W} \theta_W^{n(w)}$
     - Log-likelihood $\mathcal{L}(\theta) = - \dfrac{1}{n} \sum_{w \in W} n(w) \log \theta_w$
-    - MLE $\hat{\theta}_w = \dfrac{n(w)}{\sum_{w' \in W} n(w')} = \dfrac{n(w)}{n}$
+    - MLE $$\hat{\theta}_w = \dfrac{n(w)}{\sum_{w' \in W} n(w')} = \dfrac{n(w)}{n}$$
   - Gaussian model
     - Log-likelihood = $-\dfrac{1}{n} \log p(x \vert \mu,\sigma^2) = \dfrac{d}{2} \log(2\pi \sigma^2) + \dfrac{1}{2 \pi \sigma^2} \sum_{x \in \mathcal{S}}  \vert  \vert  x-\mu  \vert  \vert ^2$
     - MLE - mean is sample mean, variance is sample variance.
@@ -573,7 +573,7 @@ Comment: As the two strategies are explained side-by-side, it was quite hard to 
   - Distance is defined from the true distribution $q(x)$, measured in bits or nats.
 - Define the empirical distribution as that of sampling from the training data. Recognize the equivalence between maximizing the likelihood, minimizing the negative log likelihood, and minimizing the Kullback distance between the empirical distribution and the model.
   - $q_\mathcal{S}(x)$ is the empirical distribution
-  - $\text{KL}_x(q \vert  \vert p_{\theta}) = \sum_x q_\mathcal{S}(x) \log q_\mathcal{S} (x)- \sum_x q_\mathcal{S}(x) \log p_{\theta} (x)$
+  - $$\text{KL}_x(q \vert  \vert p_{\theta}) = \sum_x q_\mathcal{S}(x) \log q_\mathcal{S} (x)- \sum_x q_\mathcal{S}(x) \log p_{\theta} (x)$$
   - $- \sum_x q_\mathcal{S}(x) \log p_{\theta} (x)$ is the negative log likelihood.
 - Identify alternating minimization between the model parameters 𝜃 (weights) and the distribution of $z \vert x$ (states) as a common strategy for training models with latent variables.
   - Latent variables are variables which we cannot observe.
@@ -581,8 +581,8 @@ Comment: As the two strategies are explained side-by-side, it was quite hard to 
   - ![Screen Shot 2020-03-07 at 04.11.13 AM](assets/Screen Shot 2020-03-07 at 04.11.13 AM.png)
   - ![Screenshot 2020-04-12 at 3.28.22 AM](assets/Screenshot 2020-04-12 at 3.28.22 AM.png)
   - Solving the green minimisation problem solves the blue minimisation problem.
-  - Expectation step - minimise $\text{KL}_x(q  \vert  \vert  p_\theta)$ by computing the soft labels with the parameter $\theta$.
-  - Maximisation step - minimise $\text{KL}_{z \vert x} (q \vert  \vert p_\theta)$ over the parameter $\theta$.
+  - Expectation step - minimise $$\text{KL}_x(q  \vert  \vert  p_\theta)$$ by computing the soft labels with the parameter $\theta$.
+  - Maximisation step - minimise $$\text{KL}_{z \vert x} (q \vert  \vert p_\theta)$$ over the parameter $\theta$.
 
 
 
@@ -622,7 +622,7 @@ Please draw the matrix and label the dimensions.
   - $\varphi(x) = \pi_1 \varphi_1(x) + \dots + \pi_k \varphi_k(x)$. The area under graph of each $\varphi$ is one, and the mixing parameters $\pi_i$ sums up to one.
 - Write down the distribution of a Gaussian mixture model and its log likelihood. Compare with the distribution and log likelihood of the fully-observed model.
   - Parameters - $\pi_i$, $\mu_i$, $\sigma_i$ for each of the $k$ spherical Gassians.
-  - Distribution $p_{\theta}(x) = \sum_Z \pi_z (2 \pi \sigma_z^2)^{d/2} \exp \left\{ -\dfrac{1}{2 \sigma_2^2}  \vert  \vert  x - \mu_z  \vert  \vert ^2 \right\}$
+  - Distribution $$p_{\theta}(x) = \sum_Z \pi_z (2 \pi \sigma_z^2)^{d/2} \exp \left\lbrace -\dfrac{1}{2 \sigma_2^2}  \vert  \vert  x - \mu_z  \vert  \vert ^2 \right\rbrace$$
 - Recognize that log likelihood of fully observed model is convex with unique local minima, but the latent model is non-convex with many local minima.
   - ![Screenshot 2020-03-07 at 6.05.33 PM](assets/Screenshot 2020-03-07 at 6.05.33 PM.png)
 
@@ -882,11 +882,11 @@ Not useful for stock returns modelling, but a good tool to measure volatility.
 
 ### Stochastic processes 
 
-A stochastic process $\{X_t\}_t \in T$ is a collection of random variables indexed by some index set $T$ and governed by some joint distribution $P$. The random variables $X_t$ take on values in some state space $\mathcal{S}$.
+A stochastic process $\lbrace X_t \rbrace _t \in T$ is a collection of random variables indexed by some index set $T$ and governed by some joint distribution $P$. The random variables $X_t$ take on values in some state space $\mathcal{S}$.
 
 $T$ and $\mathcal{S}$ could be discrete or continuous.
 
-For a time series, $\mathcal{S} = \mathbb{R}$, and $T = \{ 0,1,2,\cdots \}$
+For a time series, $\mathcal{S} = \mathbb{R}$, and $T = \lbrace 0,1,2,\cdots \rbrace$
 
 
 
@@ -918,9 +918,9 @@ In essence, this is Pearson correlation applied on elements that are time $t$ ap
 
 ### White noise sequences
 
-All time entries $\{ a_t \}$ are independent of each other, with a finite variance.
+All time entries $\lbrace a_t \rbrace$ are independent of each other, with a finite variance.
 
-If $\{ a_t \}$ is normally distributed then the sequence is a "Gaussian white noise"
+If $\lbrace a_t \rbrace$ is normally distributed then the sequence is a "Gaussian white noise"
 
 
 
@@ -1283,7 +1283,7 @@ The forward probability $\alpha_t^k$ is the joint probability of the hidden stat
 
 ![Screenshot 2020-04-14 at 6.59.00 AM](assets/Screenshot 2020-04-14 at 6.59.00 AM.png)
 
-To get the (required) joint probability of observations $p(\{ O_t \}_{t=1}^T )$, take the sum of the latest forward probabilities over all the hidden states $\sum_k \alpha_t^k$.
+To get the (required) joint probability of observations $p(\lbrace O_t \rbrace_{t=1}^T )$, take the sum of the latest forward probabilities over all the hidden states $\sum_k \alpha_t^k$.
 
 Dynamic programming simplifies the computation of all $K^T$ paths to $KT$ alphas.
 
@@ -1295,7 +1295,7 @@ Dynamic programming simplifies the computation of all $K^T$ paths to $KT$ alphas
 
 ![Screenshot 2020-04-09 at 2.02.31 AM](assets/Screenshot 2020-04-09 at 2.02.31 AM.png)
 
-d-separation allows for the above decomposition, because we condition on $S_t$ which d-separates the two subgraphs and thus $$\{ O_1 ... O_t, S_1 ... S_{t-1} \} \bot \{ O_{t+1} ... O_T, S_{t+1} ... S_T \} \ \vert \ S_t$$
+d-separation allows for the above decomposition, because we condition on $S_t$ which d-separates the two subgraphs and thus $$\lbrace O_1 ... O_t, S_1 ... S_{t-1} \rbrace \bot \lbrace O_{t+1} ... O_T, S_{t+1} ... S_T \rbrace \ \vert \ S_t$$
 
 The first part $\alpha_t^k$ is calculated in the forward algorithm until $t$.
 
@@ -1531,7 +1531,7 @@ $v_\pi (s) \geq v_{\pi'} (s)$ for all $s \in \mathcal{S}$
 
 **Optimal state-value function**
 
-$v_{*}(s) = \max_\pi v_\pi (s) = \max_a q_*(s,a)$
+$$v_{*}(s) = \max_\pi v_\pi (s) = \max_a q_*(s,a)$$
 
 **Optimal action-value function**
 

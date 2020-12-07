@@ -3,7 +3,7 @@ Summarised notes for courses, in markdown format
 
 
 
-SUTD courses
+### SUTD courses
 
 | Course name (and link to my notes)                           | Semester    | Code                                                         |
 | ------------------------------------------------------------ | ----------- | ------------------------------------------------------------ |
@@ -16,7 +16,7 @@ SUTD courses
 
 
 
-SMU courses
+### SMU courses
 
 | Course name (and link to my notes)                           | Semester  | Code    |
 | ------------------------------------------------------------ | --------- | ------- |
@@ -27,12 +27,35 @@ SMU courses
 
 
 
+### How to use
+
+You may view them online in the links above. However, some mathematical expression still do not render correctly. Despite my efforts over an entire weekend, I could not make it render exactly as it should in Typora.
+
+For best results, please download [Typora](https://typora.io/) and view it on the app. You can export to .html or .pdf from Typora. Snapshots of such exports is available on [OpenSUTD](https://opensutd.org/course-notes/) 
 
 
 
+### Attribution
+
+These summaries are from the courses that I have taken and is not my material. Any images should be assumed to be taken from the instructor's slides.
 
 
 
+### Motivation
+
+OpenSUTD has compiled [course notes](https://github.com/OpenSUTD/course-notes) from students.
+
+Instead of hosting merely .pdfs or .docx, **I think we should make use of Github as the code hosting platform**. I wanted to write course notes only in  markdown so that changes can be tracked.
+
+I would also like to see which part of my summaries has improved, and how has the material changed over the years. You would be doing me a favour if you improve on these set of notes :)
 
 
+
+### Possible improvements
+
+These are some aspects that I feel could be improved
+
+- Accuracy. While I received a few comments on the SUTD notes, it has not been fully proofread.
+- Reduced dependence on instructor's slides. For the more content heavy courses (e.g. Statistical Machine Learning or SML), many slides were lifted, and I hope to reduce on that.
+- More summarised. This is not a replacement for course notes but rather summaries of the course notes, extracting important information that are used for revision and future reference.
 

@@ -616,11 +616,11 @@ Three set of variables
     
     For our course we will assume all edges have infinite capacity.
     
-    - **Max-flow problem (Ford-Fulkerson) **
+    - **Max-flow problem (Ford-Fulkerson)**
     
       This can be formulated into a min-cost flow problem by connecting an arc from the tap of the source, with infinite capacity and negative one cost.
     
-      (The dual problem is the **min-cut problem**.)
+      (The dual problem is the **min-cut problem**)
     
       - Baseball elimination (example)
     
@@ -1030,7 +1030,7 @@ $$
 \sum_{j \in S} x_j \leq \vert S \vert - 1
 $$
 
-A **minimal cover** is a cover that $|S| - 1$ of its elements has a weight below the limit. Using minimal covers is usually useful.
+A **minimal cover** is a cover that $\vert S \vert - 1$ of its elements has a weight below the limit. Using minimal covers is usually useful.
 
 #### Gomory cuts
 
