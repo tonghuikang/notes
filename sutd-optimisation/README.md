@@ -1215,7 +1215,7 @@ Randomly start with two nodes, you have a 2-node subtour. You randomly choose a 
 
 Start with the minimum spanning tree. Then do magic.
 
-Assumes **triangle inequality**. (Triangle inequality do not hold in real life, however. A direct path may be shorter than a detour.)
+Assumes **triangle inequality**. (Triangle inequality do not hold in real life, however. A detour may be shorted than a direct path.)
 
 **Local search Algorithms (2-Opt)**
 

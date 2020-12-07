@@ -325,7 +325,7 @@ conda install nb_conda jupyter ipykernel -y
       - **What to remember** (A kind of attention)
       - Key matrix $W_t$, Query vector $[h_{t-1},x_t]$
       - Outputs a 0-to-1 vector
-    - $$\tilde{C}_t = \tanh(W_C \cdot [h_{t-1}, x_t] + b_C)$$
+    - $$\tilde{C}_t$$$$= \tanh(W_C \cdot [h_{t-1}, x_t] + b_C)$$
       - **How much to remember** (A kind of attention)
       - Key matrix $W_c$. Query vector $[h_{t-1},x_t]$
       - Outputs a -1-to-1 vector
@@ -567,7 +567,7 @@ Comment: As the two strategies are explained side-by-side, it was quite hard to 
   - Compute the MLE $\theta^+$ and $\theta^-$ for the likelihoods for each of the classes (i.e. find the optimal parameters for each class). Then compute the likelihood of the new data point on the model trained on each class. We look at the sign of the ratio
     - $\log \dfrac{p(\mathcal{S} \vert \theta^+)}{p(\mathcal{S} \vert \theta^-)} = \sum_w n(w) \log \dfrac{\theta_w^+}{\theta_w^-}$
   - Classifying between two Gaussian with the same variance and different means $\mu^+$ and $\mu^-$
-    - $\log \dfrac{p(x \vert \mu^+,\sigma)}{p(x \vert \mu^-,\sigma)} = x \cdot \dfrac{\mu^+ - \mu^-}{\sigma^2} - \dfrac{1}{2 \sigma^2} \left( \vert  \vert \mu^+ \vert  \vert ^2 -  \vert  \vert \mu^- \vert  \vert ^2 \right) \\= x\theta - \theta_0$
+    - $\log \dfrac{p(x \vert \mu^+,\sigma)}{p(x \vert \mu^-,\sigma)} = x \cdot \dfrac{\mu^+ - \mu^-}{\sigma^2} - \dfrac{1}{2 \sigma^2} \left( \vert  \vert \mu^+ \vert  \vert ^2 -  \vert  \vert \mu^- \vert  \vert ^2 \right) \\ = x\theta - \theta_0$
 - Define the Kullback distance as the expectation of the log likelihood ratio. Recognize that the Kullback distance is non-negative and not symmetric.
   - $\text{KL}_w(q \vert  \vert p) = \mathbb{E}\left[ \log \dfrac{q(x)}{p(x)} \right] = \int q(x) \log \dfrac{q(x)}{p(x)} dx \geq 0$
   - Distance is defined from the true distribution $q(x)$, measured in bits or nats.
@@ -1525,13 +1525,13 @@ How do you **compute the action-values** given a policy?
 
 If you have one of these, **you can evaluate the rest**.
 
-**Optimal policy **
+**Optimal policy**
 
 $v_\pi (s) \geq v_{\pi'} (s)$ for all $s \in \mathcal{S}$
 
 **Optimal state-value function**
 
-$$v_{*}(s) = \max_\pi v_\pi (s) = \max_a q_*(s,a)$$
+$$v_{*}(s) $$$$$= \max_\pi v_\pi (s) = \max_a q_*(s,a)$$
 
 **Optimal action-value function**
 
