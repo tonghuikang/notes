@@ -5,7 +5,7 @@ Summarised notes for courses, in markdown format
 
 ### SUTD courses
 
-| Course name (and link to my notes)                           | Semester    | Code                                                         |
+| Course name (and link to the notes)                          | Semester    | Code                                                         |
 | ------------------------------------------------------------ | ----------- | ------------------------------------------------------------ |
 | [Optimisation](./sutd-optimisation/README.md)                | Fall 2019   | [40.002](https://esd.sutd.edu.sg/courses/40002-optimisation/) |
 | [Data and Business Analytics](./sutd-data-and-business-analytics/README.md) | Fall 2019   | [40.011](https://esd.sutd.edu.sg/courses/40011-data-business-analytics/) |
@@ -18,7 +18,7 @@ Summarised notes for courses, in markdown format
 
 ### SMU courses
 
-| Course name (and link to my notes)                           | Semester  | Code    |
+| Course name (and link to the notes)                          | Semester  | Code    |
 | ------------------------------------------------------------ | --------- | ------- |
 | [The Design of Business](./smu-the-design-of-business/README.md) | Fall 2020 | MGMT330 |
 | [Consumer Behaviour](./smu-consumer-behaviour/README.md)     | Fall 2020 | MKTG201 |
@@ -27,11 +27,13 @@ Summarised notes for courses, in markdown format
 
 
 
-### How to use
+### How this is built
 
-You may view them online in the links above. However, some mathematical expression still do not render correctly. Despite my efforts over an entire weekend, I could not make it render exactly as it should in Typora.
+All files are stored in this [repository](https://github.com/tonghuikang/notes). This site is deployed with [Github Pages](https://pages.github.com/), which uses [Jekyll](https://jekyllrb.com/) to turn markdown (.md) files into .html files for web viewing. 
 
-For best results, please download [Typora](https://typora.io/) and view it on the app. You can export to .html or .pdf from Typora. Snapshots of such exports is available on [OpenSUTD](https://opensutd.org/course-notes/) 
+The notes were written on the [Typora](https://typora.io/) app. For editing and best viewing results, clone the repository and view it on the app. You can export to .html or .pdf from Typora. Snapshots of such exports is available on [OpenSUTD](https://opensutd.org/course-notes/).
+
+Mathematical formulas is processed with [MathJax](https://tonghuikang.github.io/mathjax-experiment/), however the way it renders is sometimes different from Typora.
 
 
 
@@ -43,7 +45,7 @@ These summaries are from the courses that I have taken and is not my material. A
 
 ### Motivation
 
-OpenSUTD has compiled [course notes](https://github.com/OpenSUTD/course-notes) from students.
+OpenSUTD has collated [course notes](https://github.com/OpenSUTD/course-notes) from contributing students.
 
 Instead of hosting merely .pdfs or .docx, **I think we should make use of Github as the code hosting platform**. I wanted to write course notes only in  markdown so that changes can be tracked.
 
