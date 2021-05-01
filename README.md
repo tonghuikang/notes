@@ -13,6 +13,9 @@ Summarised notes for courses, in markdown format
 | [Manufacturing and Service Operations](./sutd-manufacturing-and-service-operations/README.md) | Spring 2020 | [40.012](https://esd.sutd.edu.sg/courses/40012-manufacturing-and-service-operations/) |
 | [Engineering Systems Architecture](./sutd-engineering-systems-architecture/README.md) | Spring 2020 | [40.014](https://esd.sutd.edu.sg/courses/40014-engineering-systems-architecture/) |
 | [Statistical Machine Learning](./sutd-statistical-machine-learning/README.md) | Spring 2020 | [40.319](https://esd.sutd.edu.sg/courses/40319-statistical-and-machine-learning/) |
+| Advanced Optimisation                                        | Spring 2021 |                                                              |
+| Advanced Stochastic Modelling                                | Spring 2021 |                                                              |
+| Deep Learning                                                | Spring 2021 |                                                              |
 
 
 
