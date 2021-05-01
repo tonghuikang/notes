@@ -13,9 +13,10 @@ Summarised notes for courses, in markdown format
 | [Manufacturing and Service Operations](./sutd-manufacturing-and-service-operations/README.md) | Spring 2020 | [40.012](https://esd.sutd.edu.sg/courses/40012-manufacturing-and-service-operations/) |
 | [Engineering Systems Architecture](./sutd-engineering-systems-architecture/README.md) | Spring 2020 | [40.014](https://esd.sutd.edu.sg/courses/40014-engineering-systems-architecture/) |
 | [Statistical Machine Learning](./sutd-statistical-machine-learning/README.md) | Spring 2020 | [40.319](https://esd.sutd.edu.sg/courses/40319-statistical-and-machine-learning/) |
-| Advanced Optimisation                                        | Spring 2021 |                                                              |
-| Advanced Stochastic Modelling                                | Spring 2021 |                                                              |
-| Deep Learning                                                | Spring 2021 |                                                              |
+| [Advanced Optimisation](./sutd-advanced-optimisation/README.md) | Spring 2021 | [40.302](https://esd.sutd.edu.sg/courses/40302-advanced-topics-in-optimisation/) |
+| [Advanced Stochastic Modelling](./sutd-advanced-stochastic-modelling/README.md) | Spring 2021 | [40.305](https://esd.sutd.edu.sg/courses/40305-advanced-topics-in-stochastic-modeling/) |
+| [Deep Learning](./sutd-deep-learning/README.md)              | Spring 2021 | [50.039](https://istd.sutd.edu.sg/undergraduate/courses/50-039-theory-and-practice-of-deep-learning) |
+| [Chinese Short Fiction](./sutd-chinese-short-fiction/README.md) | Spring 2021 | [20.120](https://hass.sutd.edu.sg/education/undergraduate-subjects/elective/02-120-history-traditional-chinese-short-fiction) |
 
 
 
@@ -50,7 +51,7 @@ These summaries are from the courses that I have taken and is not my material. A
 
 OpenSUTD has collated [course notes](https://github.com/OpenSUTD/course-notes) from contributing students.
 
-Instead of hosting merely .pdfs or .docx, **I think we should make use of Github as the code hosting platform**. I wanted to write course notes only in  markdown so that changes can be tracked.
+Instead of hosting merely .pdfs or .docx, **I think we should make use of Github as the code hosting platform**. I wanted to write course notes only in markdown so that changes can be tracked.
 
 I would also like to see which part of my summaries has improved, and how has the material changed over the years. You would be doing me a favour if you improve on these set of notes :)
 
@@ -63,4 +64,5 @@ These are some aspects that I feel could be improved
 - Accuracy. While I received a few comments on the SUTD notes, it has not been fully proofread.
 - Reduced dependence on instructor's slides. For the more content heavy courses (e.g. Statistical Machine Learning or SML), many slides were lifted, and I hope to reduce on that.
 - More summarised. This is not a replacement for course notes but rather summaries of the course notes, extracting important information that are used for revision and future reference.
+- Add a forword to each course to summarise my thoughts on each course and what did I actually learn.
 
