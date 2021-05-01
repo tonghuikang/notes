@@ -1,8 +1,6 @@
 # Deep Learning
 
-I am auditing this course, so projects and examinations are optional for me. The examinations allows you to bring a two sided cheatsheet. It challenges your preparation work (rather than understanding).
-
-I think it is better to condense this course into a set of interview questions. I would prepare one in another [repository](https://github.com/tonghuikang/cs-impostor/).
+I am auditing this course, so projects and examinations are optional for me. I think it is better to condense this course into a set of interview questions. I would prepare one in another [repository](https://github.com/tonghuikang/cs-impostor/).
 
 * auto-gen TOC:
 {:toc}
@@ -513,7 +511,7 @@ Weight decay with regularisation
 - Exponential moving average (EMA)
   - The weights of EMA($g_s$)$_t$ sum up to $1 - \alpha_{\text{EMA}}^{t+1}$
 - $w_{t+1} = w_t - \eta_t \dfrac{g_t}{\sqrt{d_t + \epsilon}}$
-- $d_t = \alpha_\text{EMA} d_{t-1} + (1-\alpha_\text{EMA})||g_t||^2$
+- $d_t = \alpha_\text{EMA} d_{t-1} + (1-\alpha_\text{EMA}) \vert \vert g_t \vert \vert ^2$
 - Summary of method
   - Maintain an EMA for squared norms of gradient
   - Divide gradient by square root of EMA, plus a stabilising $\epsilon$
@@ -734,9 +732,9 @@ What is a good attack sample
 - Untargeted Gradient Attack
   - Options
     - Move away from the correct classification
-      - Gradient ascent $\tilde{x} \larr x + \epsilon \nabla_x f_c(x, \theta, y)$
+      - Gradient ascent $\tilde{x} \leftarrow x + \epsilon \nabla_x f_c(x, \theta, y)$
     - Move towards the least probable classification
-      - Gradient descent $\tilde{x} \larr x - \epsilon \nabla_x f_{c^*}(x, \theta, y)$
+      - Gradient descent $\tilde{x} \leftarrow x - \epsilon \nabla_x f_{c^*}(x, \theta, y)$
     - (Use of logits instead of sigmoid to preserve gradient)
   - Gradient attack works better than randomly noising because we no longer move randomly in the feature map.
 - Fast Gradient Sign Method (FGSM)
@@ -787,7 +785,7 @@ What is a good attack sample
   - More effective if the attacker has access to model hyperparameters and dataset
 - Boundary attack (targeted, iterated, black-box)
   - Access to inputs and outputs only
-  - Heavily noise the image to misclassify first, then minimise $||\tilde{x} - x||$ while still misclassifying
+  - Heavily noise the image to misclassify first, then minimise $\vert \vert \tilde{x} - x \vert \vert$ while still misclassifying
   - Uses ideas from mathematical topology to better choose the next direction
 - Transferability of attacks
   - May work for secret models
@@ -1315,7 +1313,7 @@ https://arxiv.org/abs/1406.2661
 
 An architecture which attempts to learn to produce the samples distribution in a given dataset.
 
-Train a model $G$ which noise sample inputs $z \in \R^k$ drawn from normalised Gaussian distributions.
+Train a model $G$ which noise sample inputs $z \in \mathbb{R}^k$ drawn from normalised Gaussian distributions.
 
 Components
 
@@ -1349,7 +1347,7 @@ Objective
 
 - Find a good distribution $q$ that matches $p$, by minimising KL-divergence
 - No idea what is going on here
-- Proof https://www.youtube.com/watch?v=uaaqyVS9-rM&t=1182s
+- [Proof](https://www.youtube.com/watch?v=uaaqyVS9-rM&t=1182s)
 
 
 
@@ -1697,3 +1695,18 @@ Non-stationarity in problems - the distribution of candies can change over time
 - Random comments
   - Catching people for training on the test set
   - How to measure performance correctly (there is a huge variance in the training accuracy)
+
+
+
+## Finals Cheatsheet
+
+The examinations allows you to bring a two sided cheatsheet. It challenges your preparation work. It is possible to repeat the instructor sentences without sufficient understanding.
+
+![page-1](finals-cheatsheet-page-1.png)
+
+![page-1](finals-cheatsheet-page-2.png)
+
+
+
+
+
