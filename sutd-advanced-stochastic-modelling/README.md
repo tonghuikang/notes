@@ -1,5 +1,9 @@
 # Stochastic Modelling
 
+This course notes only contain the first half of the half-module. 
+
+The instructor had well written notes for second half on Martingale model, which is sufficient for me to depend on.
+
 * auto-gen TOC:
 {:toc}
 
@@ -358,7 +362,7 @@ I have mostly referred an annotated
 
 Takeaways
 
-- A Martingales is a process where the expected value of the next step is always the same as the current value. This is used to derive other insights.
+- A Martingales is a process where the expected value of the next step is always the same as the current value. This is used to derive other insights, which may not be exactly related to the Martingale process.
 - We assume that markets are efficient, and all prices reflected are in equilibrium. This includes the initial stock price and the price of the option.
 
 
