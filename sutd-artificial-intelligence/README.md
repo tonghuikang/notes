@@ -16,7 +16,22 @@
 - Finals - 20%
 
 
+<div style="page-break-after: always;"></div>
+## Cheatsheet
 
+![cheatsheet-page-1](assets/cheatsheet-page-1.png)
+
+![cheatsheet-page-2](assets/cheatsheet-page-2.png)
+
+<div style="page-break-after: always;"></div>
+![cheatsheet-page-3](assets/cheatsheet-page-3.png)
+
+![cheatsheet-page-4](assets/cheatsheet-page-4.png)
+
+
+
+
+<div style="page-break-after: always;"></div>
 ## Introduction to AI
 
 Turing Test
@@ -503,7 +518,7 @@ Evaluation
     - average number of **total** bits needed to encode data coming from a source with distribution $P$ when we use model $Q$
   - Cross entropy
     - distance between two probability distributions $P$ and $Q$
-    - $H(P,Q) = H(P) + D_{KL}(P||Q) = - \sum p(x) \log q(x)$
+    - $H(P,Q) = H(P) + D_{KL}(P \vert \vert Q) = - \sum p(x) \log q(x)$
     - average number of **extra** bits needed to encode data coming from a source with distribution $P$ when we use model $Q$
 
 Sources of error
@@ -616,6 +631,7 @@ Concepts from Deep Learning
 ## Convolutional Neural Networks
 
 - The formula = $\dfrac{N-F+2P}{\text{stride}} + 1$
+- (I am still not sure if this is correct)
 - There are no trainable parameters in pooling
 
 
@@ -661,7 +677,7 @@ STRIPS Instance definition (POIG)
 - P - a set of proportional variables
 - O - a set of operators, each is a 3-tuple (pre, add, del)
   - pre - facts that must be true before the action can be performed (precondition)
-    - How about facts that must be false
+    - How about facts that must be false?
   - add - facts that will change to true when the action is performed (postcondition)
   - del - facts that will change to false when the action is performed (postcondition)
 - I - initial state of the world
@@ -748,7 +764,7 @@ Use of conditional independence reduces the size of the representation of the jo
 Conditional independence
 
 - Variables X and Y is conditionally independent given Z
-- P(X,Y,Z) = P(X|Z) P(Y|Z) P(Z)
+- P(X,Y,Z) = P(X \vert Z) P(Y \vert Z) P(Z)
 
 How to count number of independent numbers needed - you do not double count $x$ and $1-x$
 
@@ -762,19 +778,4 @@ Bayesian network representation
 
 Global semantics defines the full joint distribution as the product of local conditional distributions
 
-- $P(X_1, ..., X_N) = \prod_i P(X_i | \text{Parents}(X_i))$
-
-
-
-
-
-
-
-
-
-
-​			
-​		
-
- 											 									
-
+- $P(X_1, ..., X_N) = \prod_i P(X_i \vert \text{Parents}(X_i))$

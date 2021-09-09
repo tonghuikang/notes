@@ -7,6 +7,23 @@
 <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <script>window.MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}};</script>
 
+- Class participation - 10%
+- Homework - 30%
+- Project - 30%
+- Finals - 30%
+
+<div style="page-break-after: always;"></div>
+
+
+## Cheatsheets
+
+![cheatsheet-page-1](./assets/cheatsheet-page-1.png)
+
+![cheatsheet-page-1](./assets/cheatsheet-page-2.png)
+
+
+
+<div style="page-break-after: always;"></div>
 
 
 ## Introduction
@@ -22,7 +39,9 @@ Project requirements
   - Clarify and quality in presentation/report
   - Technical depth or possible data analysis
   - Impact and contribution to society
-- Examples of previous year projects - ?
+- Notable projects
+  - Is it rational for governments to open up their borders unilaterally?
+  - Modelling football penalty shootout, and effect of knowledge on the type of players
 
 
 
@@ -65,6 +84,7 @@ Formulation
   - For each action combination, for each player
   - If the strategy is mixed, we evaluate the expected payoff
 
+<div style="page-break-after: always;"></div>
 
 
 ## Static games of complete information
@@ -732,18 +752,18 @@ Examples
   - By showing a linear response is the best response to a linear strategy in both ways, we show that a pair of linear responses is a BNE
   - Does not show uniqueness however
 - Buyer maximisation exercise is to maximise
-  - $\left[v_b - \dfrac{p_b + E[p_s(v_s) | p_b \geq p_s(v_s)]}{2} \right] P[p_b \geq p_s(v_s)]$
+  - $\left[v_b - \dfrac{p_b + E[p_s(v_s) \vect p_b \geq p_s(v_s)]}{2} \right] P[p_b \geq p_s(v_s)]$
   - The expecation is the expected price the seller will ask, conditional on the ask being less than the buyer's offer of $p_b$
   - By considering that seller strategy is linear
     - $P[p_b \geq p_s(v_s)] = \dfrac{p_b-a_s}{c_s}$
-    - $E[p_s(v_s)|p_b \geq p_s(v_s)] = \dfrac{a_s + p_b}{2}$
+    - $E[p_s(v_s) \vect p_b \geq p_s(v_s)] = \dfrac{a_s + p_b}{2}$
     - $p_b = \dfrac{2}{3} v_b + \dfrac{1}{3}a_s$
 - Seller maximisation exercise is to maximise
-  - $\left[\dfrac{p_s + E[p_b(v_b) | p_b(v_b) \geq p_s]}{2} - v_s \right] P[p_b(v_b) \geq v_s]$
+  - $\left[\dfrac{p_s + E[p_b(v_b)  \vect  p_b(v_b) \geq p_s]}{2} - v_s \right] P[p_b(v_b) \geq v_s]$
   - The expecation is the expected price the buyer will offer, conditional on the offer being greater than the seller's ask of $p_s$
   - By considering that buyer strategy is linear
     - $P[p_b(v_b) \geq v_s]$
-    - $E[p_b(v_b) | p_b(v_b) \geq p_s]$ 
+    - $E[p_b(v_b)  \vect  p_b(v_b) \geq p_s]$ 
     - $p_s = \dfrac{2}{3}v_s + \dfrac{1}{3}(a_b + c_b) = a_s + c_s v_s$
 - The player linear strategies are to be the best responses to each other
   - Equate the coefficients in $v_s$ and $v_b$ and solve for $a_b, a_s, c_b, c_s$
@@ -775,7 +795,7 @@ Examples
 - Valuation is equal to $v_i = \dfrac{(1-c_i)^2}{4}$ where $c_i$ is drawn from the uniform distribution
 - The standard formula of uniform FPA is not applicable because ...
 - We assume that the bribe $b_i = \beta(c_i) = \alpha + \gamma(1-c_i)^2$ 
-- $U_i(b_i | c_i) = (v_i - b_i) P[b_j(c_j) < b_j]$
+- $U_i(b_i  \vect  c_i) = (v_i - b_i) P[b_j(c_j) < b_j]$
 - $P[b_j(c_j) < b_j] = \sqrt{(b_i - \alpha)/\gamma}$
 - Can solve $\beta(v) = v - \dfrac{1}{F(v)^{n-1}} \int_\underline{v}^v F(v)^{n-1} dx$ directly without assumptions also (please check)
 
