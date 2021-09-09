@@ -17,6 +17,9 @@ Summarised notes for courses, in markdown format
 | [Advanced Stochastic Modelling](./sutd-advanced-stochastic-modelling/README.md) | Spring 2021 | [40.305](https://esd.sutd.edu.sg/courses/40305-advanced-topics-in-stochastic-modeling/) |
 | [Deep Learning](./sutd-deep-learning/README.md)              | Spring 2021 | [50.039](https://istd.sutd.edu.sg/undergraduate/courses/50-039-theory-and-practice-of-deep-learning) |
 | [Chinese Short Fiction](./sutd-chinese-short-fiction/README.md) | Spring 2021 | [20.120](https://hass.sutd.edu.sg/education/undergraduate-subjects/elective/02-120-history-traditional-chinese-short-fiction) |
+| [Artificial Intelligence](./sutd-artificial-intelligence/README.md) | Spring 2021 | [50.021](https://istd.sutd.edu.sg/undergraduate/courses/50021-artificial-intelligence) |
+| [Information Retrieval](./sutd-information-retrieval/README.md) | Spring 2021 | [20.120](https://istd.sutd.edu.sg/undergraduate/courses/50045-information-retrieval) |
+| [Game Theory](./sutd-game-theory/README.md) | Spring 2021 | [20.120](https://hass.sutd.edu.sg/education/undergraduate-subjects/elective/02-120-history-traditional-chinese-short-fiction) |
 
 
 
