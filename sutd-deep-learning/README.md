@@ -1,6 +1,6 @@
 # Deep Learning
 
-I am auditing this course, so projects and examinations are optional for me. I think it is better to condense this course into a set of interview questions. I would prepare one in another [repository](https://github.com/tonghuikang/cs-impostor/).
+I am auditing this course, so projects and examinations are optional for me.
 
 * auto-gen TOC:
 {:toc}
@@ -9,9 +9,23 @@ I am auditing this course, so projects and examinations are optional for me. I t
 <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <script>window.MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}};</script>
 
+<div style="page-break-after: always;"></div>
 
+## Midterm Cheatsheet
+
+![page-1](./assets/midterms-cheatsheet-page-1.png)
 
 <div style="page-break-after: always;"></div>
+
+![page-2](./assets/midterms-cheatsheet-page-2.png)
+
+<div style="page-break-after: always;"></div>
+
+## Finals Cheatsheet
+
+![page-1](./assets/finals-cheatsheet-page-1.png)
+
+![page-2](./assets/finals-cheatsheet-page-2.png)
 
 <div style="page-break-after: always;"></div>
 
@@ -1695,18 +1709,4 @@ Non-stationarity in problems - the distribution of candies can change over time
 - Random comments
   - Catching people for training on the test set
   - How to measure performance correctly (there is a huge variance in the training accuracy)
-
-
-
-## Finals Cheatsheet
-
-The examinations allows you to bring a two sided cheatsheet. It challenges your preparation work. It is possible to repeat the instructor sentences without sufficient understanding.
-
-![page-1](finals-cheatsheet-page-1.png)
-
-![page-1](finals-cheatsheet-page-2.png)
-
-
-
-
 

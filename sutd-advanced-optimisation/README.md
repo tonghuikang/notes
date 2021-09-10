@@ -8,6 +8,16 @@
 <script>window.MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}};</script>
 
 
+<div style="page-break-after: always;"></div>
+
+
+## Cheatsheet
+
+![cheatsheet](./assets/cheatsheet-page-1.png)
+
+![cheatsheet](./assets/cheatsheet-page-2.png)
+
+
 
 
 <div style="page-break-after: always;"></div>
@@ -467,7 +477,6 @@ $J_m || C_\max$
   - The sink connects to the end of the each job.
   - Within each machine, for each job pair, one job has to start eariler than the other. Disjuntive arcs connect these nodes - and we must implement either of these disjunctive arcs.
 - We calculate the length of the longest path.
-  
 
 ![jm-cmax-1](assets/jm-cmax-1.png)
 
