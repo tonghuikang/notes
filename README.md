@@ -10,7 +10,7 @@ These are my notes taken, in markdown, for some of the courses from SUTD and SMU
 | [Optimisation](./sutd-optimisation/README.md)                | Fall 2019   | [40.002](https://esd.sutd.edu.sg/courses/40002-optimisation/) | ⭐⭐      |
 | [Data and Business Analytics](./sutd-data-and-business-analytics/README.md) | Fall 2019   | [40.011](https://esd.sutd.edu.sg/courses/40011-data-business-analytics/) | ⭐       |
 | [The Analytics Edge](./sutd-the-analytics-edge/README.md)    | Fall 2019   | [40.220](https://esd.sutd.edu.sg/courses/40220-the-analytics-edge/) | ⭐⭐      |
-| [Simulation, Modelling and Analysis](https://esd.sutd.edu.sg/courses/40015-simulation-modelling-analysis/) | Fall 2019   | [40.015](https://esd.sutd.edu.sg/courses/40015-simulation-modelling-analysis/) | ❤️       |
+| [Simulation, Modelling and Analysis](./sutd-simulation-modelling-analysis/README.md) | Fall 2019   | [40.015](https://esd.sutd.edu.sg/courses/40015-simulation-modelling-analysis/) | ❤️       |
 | [Manufacturing and Service Operations](./sutd-manufacturing-and-service-operations/README.md) | Spring 2020 | [40.012](https://esd.sutd.edu.sg/courses/40012-manufacturing-and-service-operations/) | ⭐       |
 | [Engineering Systems Architecture](./sutd-engineering-systems-architecture/README.md) | Spring 2020 | [40.014](https://esd.sutd.edu.sg/courses/40014-engineering-systems-architecture/) | ⭐       |
 | [Statistical Machine Learning](./sutd-statistical-machine-learning/README.md) | Spring 2020 | [40.319](https://esd.sutd.edu.sg/courses/40319-statistical-and-machine-learning/) | ⭐       |
